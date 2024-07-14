@@ -373,56 +373,74 @@ body {
   display: flex;
   margin-top: 2rem;
   background-color: #222;
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Ensure rounded corners are applied */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
 }
 
 .contact .row .map {
   flex: 1 1 45rem;
   width: 100%;
   object-fit: cover;
+  border-radius: 12px 0 0 12px; /* Rounded corners on the left side */
 }
 
 .contact .row form {
   flex: 1 1 45rem;
   padding: 5rem 2rem;
   text-align: center;
-  
+  border-radius: 0 12px 12px 0; /* Rounded corners on the right side */
+  background-color: var(--bg);
 }
 
 .contact .row form .input-group {
   display: flex;
   align-items: center;
   margin-top: 2rem;
-  background-color: var(--bg);
-  border: 1px solid #eee;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border */
   padding-left: 2rem;
   border-radius: 12px;
 }
 
 .contact .row form .input-group input {
   width: 100%;
-  padding: 2rem;
-  font-size: 1.7rem;
+  padding: 1.5rem;
+  font-size: 1.6rem;
   background: none;
   color: #fff;
+  border: none;
+  outline: none;
+}
+
+.contact .row form .input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* Placeholder text color */
 }
 
 .contact .row form .btn {
   margin-top: 3rem;
   display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
+  padding: 1.5rem 4rem;
+  font-size: 1.6rem;
   color: #fff;
   background-color: var(--primary);
   cursor: pointer;
+  border: none;
   border-radius: 12px;
+  transition: background-color 0.3s ease;
 }
+
+.contact .row form .btn:hover {
+  background-color: #ff8c00; /* Darker background on hover */
+}
+
 
 /* Footer */
 /* Footer */
 
 .footer-info {
   font-size: 15px;
-  background-color: #ffc800;
+  background-color: #ffffff;
   padding: 20px 0;
   border-radius: 10px; /* Add rounded corners */
 }
@@ -446,6 +464,7 @@ body {
   padding: 20px;
   margin-bottom: 30px;
   margin-left: 30px; /* Add margin-left to shift to the right */
+  color: #000000;
 }
 
 
@@ -486,7 +505,7 @@ body {
 }
 
 .footer-info-col a:hover {
-  color: #ffffff;
+  color: #3c5a00;
 }
 
 .footer-image {
