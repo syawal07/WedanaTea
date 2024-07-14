@@ -352,6 +352,19 @@ body {
   font-weight: 500;
 }
 
+.product-content .btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #397405; /* Warna latar saat tombol dihover */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.product-content .btn:hover {
+  background-color: var(--primary); /* Warna latar saat tombol dihover */
+}
 
 
 
