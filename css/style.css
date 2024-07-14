@@ -1,6 +1,7 @@
 :root {
   --primary: #f0c400;
   --bg: #000000;
+  
 }
 
 * {
@@ -20,6 +21,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: #fff;
+  
 }
 
 /* Navbar */
@@ -290,16 +292,22 @@ body {
   text-align: center;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: #ffc800;
+  background-image: url('../img/card.jpg'); 
+  background-size: cover;
+  background-position: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 0 0 auto;
   min-width: 280px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .products .product-card:hover {
-  transform: translateY(-5px); /* Efek hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+
 
 
 
@@ -315,12 +323,18 @@ body {
 }
 
 .products .product-image img {
-  height: 20rem;
+  height: 12rem; /* Atur tinggi gambar sesuai kebutuhan yang lebih kecil */
   width: auto;
   max-width: 100%;
   border-radius: 1rem; /* Tambahkan border-radius untuk membuat sudut-sudut gambar melengkung */
   transition: transform 0.3s ease;
 }
+
+
+.products .product-image img:hover {
+  transform: scale(1.1); /* Efek zoom pada hover */
+}
+
 
 .products .product-image img:hover {
   transform: scale(1.1); /* Efek zoom pada hover */
@@ -333,7 +347,7 @@ body {
 }
 
 .products .product-content p {
-  color: #ffffff;
+  color: #000000;
   font-size: 12px;
   font-weight: 500;
 }
