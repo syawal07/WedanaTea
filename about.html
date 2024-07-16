@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Wedana Tea</title>
+    <title>Wedana Tea</title>
+    <link rel="icon" href="./img/footerlogo.png" type="image/x-icon" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,133 +19,140 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My Style -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
   </head>
 
   <body>
     <!-- Navbar start -->
     <nav class="navbar">
-      <a href="index.html" class="navbar-logo">Wedana<span>Tea</span></a>
+      <a href="#" class="navbar-logo">Wedana<span>Tea</span></a>
 
       <div class="navbar-nav">
-        <a href="index.html#home">Home</a>
+        <a href="./index.html">Home</a>
         <div class="dropdown">
-          <a href="./about.html">About Us</a>
+          <a href="#" class="dropbtn">About Us</a>
           <div class="dropdown-content">
-            <a href="#team">Tim Kami</a>
-            <a href="#about-wedana">Tentang Kami Wedana</a>
+            <a href="about.html">Our Team</a>
+            <a href="about.html#about-wedana">About Us Wedana</a>
           </div>
         </div>
-        <a href="index.html#products">Product</a>
-        <a href="index.html#contact">Contact</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Product</a>
+          <div class="dropdown-content">
+            <a href="about.html">Our Products</a>
+            <a href="about.html#about-wedana">Ready to serve product</a>
+            <a href="about.html#why-us"> Raw Material Products</a>
+          </div>
+        </div>
+        <a href="#contact">Contact</a>
       </div>
 
       <div class="navbar-extra">
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
+
     <!-- Navbar end -->
 
-    <!-- About Us Section start -->
-    <section id="about" class="about">
-      <h2><span>Tentang</span> Kami</h2>
+    <!-- Hero Section end -->
 
-      <!-- Tim Kami -->
-      <div id="team" class="team">
-        <h3>Tim Kami</h3>
-        <div class="team-member">
-          <img src="img/ceo.jpg" alt="Ifan Maulana" />
-          <h4>Ifan Maulana - CEO</h4>
-          <p>
-            Sebagai pendiri dan CEO, Ifan Maulana membawa visi dan strategi
-            memajukan PT Wedana Lestari Group ke kancah internasional. Ifan
-            Maulana memiliki pengetahuan mendalam tentang pasar global dan
-            berkomitmen untuk menyediakan pelayanan terbaik untuk klien kami.
-          </p>
-          <blockquote>
-            “Kami berdedikasi untuk mendorong integrasi yang mulus antara
-            produk-produk lokal dan pasar global melalui strategi perintis dan
-            efisien."
-          </blockquote>
+    <!-- About Section start -->
+    <main>
+      <section id="team" class="section">
+        <div class="container">
+          <h2>Our Team</h2>
+          <div class="team-member">
+            <img src="ifan-maulana.jpg" alt="Ifan Maulana - CEO" />
+            <div class="team-member-info">
+              <h3>Ifan Maulana</h3>
+              <p class="role">CEO</p>
+              <p class="description">
+                As the founder and CEO, Ifan Maulana brings a vision and
+                strategy to advance PT Wedana Lestari Group into the
+                international arena. Ifan Maulana has in-depth knowledge of the
+                global market and is committed to providing the best service for
+                our clients.
+              </p>
+              <p class="quote">
+                "We are dedicated to fostering a seamless integration between
+                local products and the global market through pioneering and
+                streamlined strategies."
+              </p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="anggun-pindayani.jpg" alt="Anggun Pindayani - COO" />
+            <div class="team-member-info">
+              <h3>Anggun Pindayani</h3>
+              <p class="role">COO</p>
+              <p class="description">
+                Anggun Pindayani is our Export Chief Operating Officer, with
+                extensive experience in managing all aspects of the export
+                process, from planning to execution. Her expertise in export
+                regulations ensures that all shipments are conducted in a smooth
+                and compliant manner.
+              </p>
+              <p class="quote">
+                "We prioritize client satisfaction by guaranteeing that every
+                shipment meets the highest quality standards and international
+                regulations."
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="team-member">
-          <img src="img/coo.jpg" alt="Anggun Pindayani" />
-          <h4>Anggun Pindayani - COO</h4>
+      </section>
+
+      <section id="about-wedana" class="section">
+        <div class="container">
+          <h2>About Us Wedana</h2>
+          <h3>PT WEDANA LESTARI GROUP</h3>
           <p>
-            Anggun Pindayani adalah Chief Operating Officer Ekspor kami, dengan
-            pengalaman luas dalam mengelola semua aspek proses ekspor, mulai
-            dari perencanaan hingga eksekusi. Keahliannya dalam peraturan ekspor
-            memastikan bahwa semua pengiriman dilakukan dengan benar,
-            dilaksanakan dengan lancar dan patuh.
+            PT WEDANA LESTARI GROUP is a company engaged in the export industry
+            of tea commodities from Indonesia with a commitment to providing
+            innovative and high-quality tea product solutions. Established in
+            2022, we are dedicated to providing premium tea that is committed to
+            connecting the best quality from Indonesian tea gardens with the
+            global market.
           </p>
-          <blockquote>
-            “Kami mengutamakan kepuasan klien dengan menjamin setiap pengiriman
-            terpenuhi standar kualitas tertinggi dan peraturan internasional."
-          </blockquote>
         </div>
-      </div>
+      </section>
 
-      <!-- Tentang Kami Wedana -->
-      <div id="about-wedana" class="about-wedana">
-        <h3>Tentang Kami Wedana</h3>
-        <p>
-          <strong>PT WEDANA LESTARI GROUP</strong> merupakan perusahaan yang
-          bergerak di bidang ekspor industri komoditas teh asal Indonesia dengan
-          komitmen menyediakan solusi produk teh yang inovatif dan berkualitas
-          tinggi. Didirikan pada tahun 2022, kami dedikasikan untuk menyediakan
-          teh premium yang berkomitmen untuk menghubungkan kualitas terbaik dari
-          kebun teh Indonesia dengan pasar global.
-        </p>
+      <section id="why-us" class="section">
+        <div class="container">
+          <h2>Why Us?</h2>
+          <h3>Several reasons why you should choose us:</h3>
+          <p>
+            <strong>Paragraph 1:</strong> Unsurpassed Quality: Indonesian tea is
+            known worldwide for its exceptional quality and taste. Our products
+            set the highest standards.
+          </p>
+          <p>
+            <strong>Paragraph 2:</strong> Sustainable Supply: Indonesia's
+            tropical climate and vast agricultural lands ensure a consistent and
+            sustainable supply of tea throughout the year to meet international
+            market demands.
+          </p>
+          <p>
+            <strong>Paragraph 3:</strong> Competitive pricing: Benefit from a
+            competitive pricing structure that maximizes your margins and
+            ensures cost effectiveness in your supply chain.
+          </p>
+          <p>
+            <strong>Paragraph 4:</strong> Commitment to Quality Assurance: Our
+            rigorous quality assurance practices ensure that you receive tea
+            products of the highest standard, meeting international quality
+            benchmarks.
+          </p>
+        </div>
+      </section>
+    </main>
 
-        <h4>Mengapa kita?</h4>
-        <h5>Beberapa Alasan Mengapa Anda Harus Memilih Kami:</h5>
-        <ul>
-          <li>
-            <strong>Kualitas Tak Tertandingi:</strong> Teh Indonesia terkenal di
-            dunia karena kualitas dan rasa yang luar biasa. Produk kami
-            menetapkan standar tertinggi.
-          </li>
-          <li>
-            <strong>Pasokan Berkelanjutan:</strong> Indonesia mempunyai iklim
-            tropis dan lahan pertanian yang luas memastikan pasokan teh yang
-            konsisten dan berkelanjutan sepanjang tahun untuk memenuhi tuntutan
-            pasar internasional.
-          </li>
-          <li>
-            <strong>Penetapan Harga yang Kompetitif:</strong> Dapatkan manfaat
-            dari struktur harga yang kompetitif yang memaksimalkan margin Anda
-            dan memastikan efektivitas biaya dalam rantai pasokan Anda.
-          </li>
-          <li>
-            <strong>Komitmen terhadap Jaminan Kualitas:</strong> Jaminan
-            kualitas kami yang ketat memastikan bahwa Anda menerima produk teh
-            dengan standar tertinggi, memenuhi tolok ukur kualitas
-            internasional.
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- About Us Section end -->
-
-    <!-- Footer start -->
-    <footer>
-      <div class="socials">
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="facebook"></i></a>
-      </div>
-
-      <div class="links">
-        <a href="index.html#home">Home</a>
-        <a href="about.html">Tentang Kami</a>
-        <a href="index.html#menu">Menu</a>
-        <a href="index.html#contact">Kontak</a>
-      </div>
-
-      <div class="credit">
-        <p>Created by <a href="#">Wedana Tea</a>. | &copy; 2024.</p>
+    <footer class="footer">
+      <div class="footer-copyright">
+        <p>&copy; 2024 Wedana Tea Indonesia. All Rights Reserved.</p>
       </div>
     </footer>
+
     <!-- Footer end -->
 
     <!-- Feather Icons -->
