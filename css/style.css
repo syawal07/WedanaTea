@@ -30,7 +30,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0.8);
+  background-color: #FFFFFF;
   border-bottom: 1px solid #513c28;
   position: fixed;
   top: 0;
@@ -57,7 +57,7 @@ body {
 }
 
 .navbar .navbar-nav a {
-  color: #fff;
+  color: #000000;
   display: inline-block;
   font-size: 1.3rem;
   margin: 0 1rem;
@@ -94,6 +94,7 @@ body {
 }
 
 
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -127,13 +128,14 @@ body {
 }
 
 .hero .content h1 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek shadow pada teks */
+   margin-bottom: 1rem;
   animation: fadeInUp 1s ease-out; /* Animasi masuk */
 }
 
 .hero .content p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Efek shadow pada teks */
   animation: fadeInUp 1.5s ease-out; /* Animasi masuk */
@@ -145,8 +147,8 @@ body {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   color: #fff;
-  background-color: var(--primary);
-  border-radius: 0.5rem;
+  background-color: #5BCD00;
+  border-radius: 20px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   animation: fadeInUp 2s ease-out; /* Animasi masuk */
@@ -171,42 +173,6 @@ body {
 
 
 
-.about::before,
-.about::after {
-  content: '';
-  position: absolute;
-  width: 100px; /* Sesuaikan ukuran dengan gambar daun yang Anda miliki */
-  height: 100px; /* Sesuaikan ukuran dengan gambar daun yang Anda miliki */
-  background-image: url('../img/menu/daun.png'); /* Ganti dengan path gambar daun yang Anda gunakan */
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 1; /* Sesuaikan dengan kebutuhan visual */
-  animation: floatLeaf 15s linear infinite;
-}
-
-.about::before {
-  top: 175%; /* Sesuaikan posisi vertikal */
-  left: 5%; /* Sesuaikan posisi horizontal */
-}
-
-.about::after {
-  bottom: -20%; /* Sesuaikan posisi vertikal */
-  right: 5%; /* Sesuaikan posisi horizontal */
-}
-
-@keyframes floatLeaf {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  50% {
-    transform: translateX(-20px) translateY(-20px);
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-  }
-}
-
-
 
 .about,
 .menu,
@@ -228,7 +194,7 @@ body {
 .menu h2 span,
 .products h2 span,
 .contact h2 span {
-  color: var(--primary);
+  color: #5BCD00;
 }
 
 .about .row {
@@ -388,16 +354,27 @@ body {
   font-size: 12px;
   font-weight: 500;
 }
-
 .product-content .btn {
   display: inline-block;
-  padding: 0.8rem 2rem;
-  background-color: #397405; /* Warna latar saat tombol dihover */
+  padding: 1rem 2.5rem; /* Increased padding */
+  background-color: #5BCD00; /* Background color on hover */
   color: #fff;
   text-decoration: none;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
+  margin-top: 1rem; /* Added margin to move the button down */
+   font-size: 1.2rem; /* Increased font size */
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .product-content .btn {
+    padding: 1.2rem 3rem; /* Further increased padding for mobile */
+    margin-top: 1.2rem; /* Adjusted margin for mobile */
+  }
+}
+
+
 
 .product-content .btn:hover {
   background-color: var(--primary); /* Warna latar saat tombol dihover */
@@ -438,6 +415,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border */
   padding-left: 2rem;
   border-radius: 12px;
+  border: 1px solid #000000;
 }
 
 .contact .row form .input-group input {
@@ -461,11 +439,12 @@ body {
   padding: 1.5rem 4rem;
   font-size: 1.6rem;
   color: #fff;
-  background-color: var(--primary);
+  background-color: #173202;
   cursor: pointer;
   border: none;
   border-radius: 12px;
   transition: background-color 0.3s ease;
+  border: 2px solid #000000;
 }
 
 .contact .row form .btn:hover {
@@ -571,7 +550,7 @@ body {
 .footer-copyright {
   text-align: center;
   padding: 20px 0;
-  background-color: #000000;
+  background-color: #5BCD00;
 }
 
 footer .socials {
@@ -682,6 +661,7 @@ footer .links a:hover {
 
   #hamburger-menu {
     display: inline-block;
+    color: #000000;
   }
 
   .navbar .navbar-nav {
@@ -699,7 +679,7 @@ footer .links a:hover {
   }
 
   .navbar .navbar-nav a {
-    color: var(--bg);
+    color: #000000;
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
