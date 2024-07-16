@@ -51,31 +51,47 @@ body {
   color: var(--primary);
 }
 
-.navbar .navbar-logo span {
-  color: var(--primary);
-}
-
 .navbar .navbar-nav {
   display: inline-block;
   gap: 1rem;
-  margin-left: auto; /* Ensure navbar items are aligned to the right */
+  margin-left: auto;
 }
 
-.navbar .navbar-nav a, .navbar .navbar-nav button {
+.navbar .navbar-nav a {
   color: #000000;
+  display: inline-block;
   font-size: 1.3rem;
   margin: 0 1rem;
   position: relative;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  transition: color 0.3s, border-bottom-color 0.3s;
 }
 
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid transparent;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-out;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary); /* Warna teks saat dihover */
+}
+
+.navbar .navbar-nav a:hover::after,
+.navbar .navbar-nav a.active::after {
+  transform: scaleX(1); /* Mengubah scaleX saat dihover */
+  border-bottom-color: var(--primary); /* Warna garis bawah saat dihover */
+}
+
+/* Dropdown */
 .navbar .navbar-nav .dropdown {
   position: relative;
   display: inline-block;
 }
-
 
 .navbar .navbar-nav .dropdown-content {
   display: none;
@@ -86,7 +102,6 @@ body {
   min-width: 160px;
 }
 
-
 .navbar .navbar-nav .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -95,12 +110,13 @@ body {
 }
 
 .navbar .navbar-nav .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #dbdbdb;
 }
 
 .navbar .navbar-nav .dropdown:hover .dropdown-content {
   display: block;
 }
+
 
 
 /* Navbar Extra */
@@ -626,6 +642,18 @@ footer .links a:hover {
 
 /* Tablet */
 @media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+    color: #000000;
+  }
+
+
+  /* Tablet */
+@media (max-width: 758px) {
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -634,37 +662,38 @@ footer .links a:hover {
     width: 100%;
     height: auto;
     transition: 0.3s;
-    flex-direction: column; /* Mengatur agar menu berada dalam kolom vertikal */
-    align-items: flex-start; /* Memastikan tautan menu sejajar di sepanjang sumbu vertikal */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navbar .navbar-nav.active {
     right: 0;
   }
-  .navbar .navbar-nav a:hover {
-  color: var(--primary); /* Warna teks saat dihover */
-}
-
 
   .navbar .navbar-nav a {
     color: #000000;
-    display: block; /* Mengubah display menjadi block untuk tampilan vertikal */
-    margin: 10px 0; /* Mengatur margin untuk jarak vertikal antar tautan */
-    padding: 1rem 2rem; /* Padding untuk setiap tautan */
-    font-size: 1.5rem; /* Ukuran font untuk setiap tautan */
-    text-align: left; /* Pusatkan teks secara horizontal */
-    width: 100%; /* Pastikan setiap tautan menu menempati lebar penuh */
-    border-bottom: 1px solid #ccc; /* Garis bawah opsional di antara setiap tautan menu */
+    display: block;
+    margin: 10px 0;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s; /* Transisi warna latar belakang saat hover */
+  }
+
+  .navbar .navbar-nav a:hover {
+    background-color: #f1f1f1; /* Warna latar belakang saat tautan dihover */
   }
 
   .navbar .navbar-nav .dropdown {
     position: relative;
-    display: block; /* Mengubah display agar tautan dropdown dapat menyesuaikan tampilan */
+    display: block;
   }
 
   .navbar .navbar-nav .dropdown-content {
-    display: none; /* Sembunyikan dropdown content secara default */
-    position: relative; /* Atur posisi dropdown */
+    display: none;
+    position: relative;
     left: 0;
     background-color: #fff;
     min-width: 160px;
@@ -677,24 +706,24 @@ footer .links a:hover {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    width: 100%; /* Pastikan lebar dropdown content mengisi lebar parent */
-    text-align: left; /* Pusatkan teks secara horizontal */
+    width: 100%;
+    text-align: left;
   }
 
   .navbar .navbar-nav .dropdown-content a:hover {
-    background-color: #5BCD00;
+    background-color: #d9d7d7;;
   }
 
   .navbar .navbar-nav .dropdown:hover .dropdown-content {
-    display: block; /* Tampilkan dropdown saat hover */
-    position: absolute; /* Atur posisi absolute agar tidak memengaruhi tata letak parent */
-    top: 100%; /* Atur posisi dropdown di bawah tautan dropdown */
+    display: block;
+    position: absolute;
+    top: 100%;
     left: 0;
-    width: 100%; /* Pastikan lebar dropdown content mengisi lebar parent */
+    width: 100%;
   }
 
   .navbar .navbar-nav .dropdown-content a:last-child {
-    border-bottom: none; /* Menghapus garis bawah dari tautan terakhir di dropdown */
+    border-bottom: none;
   }
 }
 
@@ -746,7 +775,7 @@ footer .links a:hover {
   .modal-content {
     flex-wrap: wrap;
   }
-
+}
 
 /* Mobile Phone */
 @media (max-width: 450px) {
