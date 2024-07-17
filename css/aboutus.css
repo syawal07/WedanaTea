@@ -133,15 +133,21 @@ body {
 }
 
 .jumbotron h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem; /* Memperbesar ukuran font */
+  animation: float 3s ease-in-out infinite;
 }
 
-.jumbotron p {
-  font-size: 1.2rem;
-  background-color: #D7FFB7;
-  padding: 1rem;
-  border-radius: 5px;
+/* Animasi mengapung */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .container {
@@ -150,86 +156,105 @@ body {
   margin: 0 auto;
 }
 
-/* Section */
+/* Atur .about-section agar memiliki latar belakang penuh pada sisi kiri dan kanan */
+.about-section {
+  background-color: #D7FFB7;
+  margin-top: -2rem;
+  padding: 2rem 5rem; /* Atur padding pada sisi kiri dan kanan */
+  width: calc(100% + 14rem); /* Lebar penuh ditambah margin kiri dan kanan */
+  position: relative;
+  left: -7rem; /* Pindahkan posisi relatif ke kiri untuk menutup margin */
+  
+}
+
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Padding dalam container */
+}
+
+.about-section h2{
+  text-align: center;
+  font-size: 2rem;
+}
+.about-section p.subtitle {
+  text-align: center;
+}
+
+/* Tambahkan padding dan margin untuk .section dan .container untuk memastikan konsistensi */
 .section {
-  padding: 4rem 0;
+  padding: 2rem 0;
+}
+
+.section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .section h2 {
-  text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-/* Section Background */
-.about-section {
-  background-color: #D7FFB7;
-  padding: 4rem; /* Adjust padding for top/bottom and left/right */
-  text-align: center;
-  width: 100%; /* Ensure it spans the full viewport width */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  border-radius: 25px;
-  border-style: hidden;
-}
-
-.about-section h2 {
-  font-size: 2.5rem;
+  font-weight: 700;
   color: #397405;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
-.about-section h2 span {
+.section h2 span {
   color: var(--primary);
 }
 
-.about-section p.subtitle {
-  font-size: 1.2rem;
-  color: #000;
-  margin-bottom: 3rem;
+.section p.subtitle {
+  font-size: 1.3rem;
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Why Us Section */
-.why-us-content {
+.section .about-section, .section .why-us-content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 
-.why-us-content .reasons {
+.section .why-us-content {
+  justify-content: space-between;
+}
+
+.section .why-us-content .reasons {
   flex: 2;
 }
 
-.why-us-content .reasons .reason {
-  margin-bottom: 2rem;
+.section .why-us-content .reasons .reason {
   padding: 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.why-us-content .reasons .reason h3 {
+.section .why-us-content .reasons .reason h3 {
   font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--highlight-color);
+}
+
+.section .why-us-content .reasons .reason p {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  margin-top: 0.5rem;
+}
+
+.section .why-us-content .reasons .reason h3 span {
   color: var(--primary);
-  margin-bottom: 0.5rem;
 }
 
-.why-us-content .reasons .reason p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.why-us-content .why-us-info {
-  flex: 1;
-  text-align: center;
-}
-
-.why-us-content .why-us-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.why-us-content .why-us-info p {
-  font-size: 1rem;
+.section .why-us-content .reasons .reason-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
   margin-bottom: 1rem;
 }
+
+
 
 /* General Styles for the Image */
 .why-us-content .why-us-info img {
@@ -254,32 +279,145 @@ body {
 }
 
 
-/* Certifications */
-.certifications {
-  text-align: center;
-  margin-top: 4rem;
-}
 
-.certifications h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.certifications img {
-  width: 100px;
-  margin: 0 1rem;
-}
 
 
 .section h2 span {
   color: #5BCD00;
 }
 
+/* Footer */
+/* Footer */
+
+.footer-info {
+  font-size: 15px;
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.footer-info .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.footer-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+}
+
+.footer-info-col {
+  flex: 1 0 300px;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-left: 30px; /* Add margin-left to shift to the right */
+  color: #000000;
+}
+
+
+.footer-info-col h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease-in-out; /* Add animation */
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-info-col ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-info-col li {
+  margin-bottom: 10px;
+}
+
+.footer-info-col a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-info-col a:hover {
+  color: #3c5a00;
+}
+
+.footer-image {
+  max-width: 15%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.footer-image2 {
+  max-width: 45%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.footer-image3 {
+  max-width: 35%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+
 .footer-copyright {
   text-align: center;
   padding: 20px 0;
   background-color: #ffffff;
   position: relative; /* Menentukan posisi relatif untuk mengontrol pseudo-element */
+}
+
+.footer-copyright::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%; /* Menempatkan di tengah */
+  transform: translateX(-50%); /* Menggeser ke kiri sejauh setengah dari lebar konten */
+  width: 50%; /* Lebar garis */
+  height: 0.1rem; /* Tinggi garis */
+  background-color: #513c28; /* Warna garis */
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #000000;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #3c5a00;
+}
+
+
+.footer-copyright p {
+ 
+  margin: 10px;
+  color: #000000;
 }
 
 
