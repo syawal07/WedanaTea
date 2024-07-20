@@ -144,7 +144,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../img/header-bgg.jpg');
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/header-bgg.jpg'); /* Replace with your image path */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -160,8 +164,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Overlay dengan transparansi */
+  background: rgba(10, 10, 10, 0.5); /* Reduced opacity */
 }
+
 
 .hero .content {
   position: relative;
@@ -173,7 +178,7 @@ body {
 .hero .content h1 {
   font-size: 2.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek shadow pada teks */
-   margin-bottom: 1rem;
+  margin-bottom: 1rem;
   animation: fadeInUp 1s ease-out; /* Animasi masuk */
 }
 
