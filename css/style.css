@@ -40,6 +40,7 @@ body {
   z-index: 9999;
 }
 
+
 .navbar .navbar-logo {
   font-size: 2rem;
   font-weight: 700;
@@ -176,7 +177,7 @@ body {
 }
 
 .hero .content h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek shadow pada teks */
   margin-bottom: 1rem;
   animation: fadeInUp 1s ease-out; /* Animasi masuk */
@@ -219,6 +220,22 @@ body {
   }
 }
 
+
+#company-adv {
+    position: relative;
+    overflow: hidden;
+    background-image: url("../img/advantages-leaves-left.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#company-adv-container {
+    max-width: 1200px;
+    background-image: url("../img/adv-floating-leaves-right.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 
 
 
@@ -330,10 +347,11 @@ body {
 
 
 /* Bagian Produk */
+
 .products .row {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1.5rem;
+  gap: 0rem;
   overflow-x: auto;
   padding: 1rem 0;
   scroll-snap-type: x mandatory; /* Aktifkan snap scroll horizontal */
@@ -357,9 +375,6 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 
 .products .product-icons a:hover {
