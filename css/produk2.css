@@ -124,60 +124,7 @@ body {
   display: none;
 }
 
-/* Jumbotron */
-.jumbotron {
-  background: url('../img/jb.png') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 12rem 0;
-}
 
-.jumbotron h1 {
-  font-size: 3.5rem; /* Memperbesar ukuran font */
-  animation: float 3s ease-in-out infinite, colorChange 6s linear infinite;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-               0 0 20px rgba(255, 255, 255, 0.6), 
-               0 0 30px rgba(255, 255, 255, 0.4);
-  transition: text-shadow 0.3s ease-in-out;
-}
-
-.jumbotron h1:hover {
-  text-shadow: 0 0 15px rgba(255, 255, 255, 1), 
-               0 0 25px rgba(255, 255, 255, 0.8), 
-               0 0 35px rgba(255, 255, 255, 0.6);
-}
-
-/* Animasi mengapung */
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Animasi perubahan warna teks */
-@keyframes colorChange {
-  0% {
-    color: #ff0000; /* Warna awal */
-  }
-  25% {
-    color: #00ff00; /* Warna kedua */
-  }
-  50% {
-    color: #0000ff; /* Warna ketiga */
-  }
-  75% {
-    color: #ff00ff; /* Warna keempat */
-  }
-  100% {
-    color: #ff0000; /* Kembali ke warna awal */
-  }
-}
 
 
 .container {
@@ -186,43 +133,19 @@ body {
   margin: 0 auto;
 }
 
-/* Atur .about-section agar memiliki latar belakang penuh pada sisi kiri dan kanan */
-.about-section {
-  background-color: #D7FFB7;
-  margin-top: -2rem;
-  padding: 2rem 5rem; /* Atur padding pada sisi kiri dan kanan */
-  width: calc(100% + 14rem); /* Lebar penuh ditambah margin kiri dan kanan */
-  position: relative;
-  left: -7rem; /* Pindahkan posisi relatif ke kiri untuk menutup margin */
-}
-
-.about-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem; /* Padding dalam container */
-}
-
-.about-section h2 {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.about-section p.subtitle {
-  text-align: center;
-}
-
-/* Tambahkan padding dan margin untuk .section dan .container untuk memastikan konsistensi */
-.section {
+/* Raw Material Products Styles */
+#raw-material-products {
+  background-color: #f4f4f4;
   padding: 2rem 0;
 }
 
-.section .container {
+#raw-material-products-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.section h2 {
+#raw-material-products-container h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #397405;
@@ -230,114 +153,110 @@ body {
   margin-bottom: 1rem;
 }
 
-.section h2 span {
-  color: #5BCD00; /* Perubahan warna */
+#raw-material-products-container h2 span {
+  color: var(--primary);
 }
 
-.section p.subtitle {
+#raw-material-products-container p.subtitle {
   font-size: 1.3rem;
   color: var(--secondary-text-color);
   text-align: center;
   margin-bottom: 2rem;
 }
 
-/* Gaya untuk .about-section dan .why-us-content agar menjadi card */
-.section .about-section, .section .why-us-content {
+.raw-material-content {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+}
+
+.raw-material-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.section .why-us-content {
-  justify-content: space-between;
+.raw-material-card.reverse {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "image info";
 }
 
-/* Gaya card */
-.card {
-  background-color: #fff;
+.raw-material-card.reverse .raw-material-image {
+  order: 2;
+}
+
+.raw-material-card.reverse .raw-material-info {
+  order: 1;
+}
+
+.raw-material-card:hover {
+  transform: scale(1.05);
+  background-color: #e9f5e9;
+}
+
+.raw-material-image {
+  max-width: 350px;
+  flex: 1;
+}
+
+.raw-material-img {
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer; /* Pointer cursor untuk interaksi klik */
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.raw-material-card:hover .raw-material-img {
+  transform: scale(1.15);
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  height: 200px;
-  margin-bottom: 1rem;
+.raw-material-info {
+  flex: 2;
 }
 
-.card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
+.raw-material-info h3 {
+  font-size: 2.2rem;
   color: #397405;
   margin-bottom: 1rem;
+  transition: font-size 0.3s ease;
 }
 
-.card p {
-  font-size: 1rem;
+.raw-material-card:hover .raw-material-info h3 {
+  font-size: 2.5rem;
+}
+
+.advantage {
+  margin-bottom: 2rem;
+}
+
+.advantage h4 {
+  font-size: 1.7rem;
+  color: #397405;
+  margin-bottom: 0.5rem;
+}
+
+.advantage p {
+  font-size: 1.1rem;
   color: var(--secondary-text-color);
-  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
-.section .why-us-content .reasons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.section .why-us-content .reasons .reason {
-  flex: 1 1 calc(33.333% - 2rem); /* Tiga card per baris */
-  max-width: calc(33.333% - 2rem);
-}
-
-/* General Styles for the Image */
-.why-us-content .why-us-info img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  height: 370px;
-}
-
-/* Tablet Styles (max-width: 768px) */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .why-us-content .why-us-info img {
-    height: 360px; /* Increased height for tablet screens */
+  .raw-material-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "info"
+      "image";
+    text-align: center;
   }
 
-  .section .why-us-content .reasons .reason {
-    flex: 1 1 calc(50% - 2rem); /* Dua card per baris pada tablet */
-    max-width: calc(50% - 2rem);
+  .raw-material-info, .raw-material-image {
+    order: unset;
   }
-}
-
-/* Mobile Styles (max-width: 480px) */
-@media (max-width: 480px) {
-  .why-us-content .why-us-info img {
-    height: 425px; /* Increased height for mobile screens */
-  }
-
-  .section .why-us-content .reasons .reason {
-    flex: 1 1 100%; /* Satu card per baris pada mobile */
-    max-width: 100%;
-  }
-}
-
-/* Animasi saat card diklik */
-.card:active {
-  transform: scale(0.95);
-  transition: transform 0.1s;
 }
 
 

@@ -124,60 +124,7 @@ body {
   display: none;
 }
 
-/* Jumbotron */
-.jumbotron {
-  background: url('../img/jb.png') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 12rem 0;
-}
 
-.jumbotron h1 {
-  font-size: 3.5rem; /* Memperbesar ukuran font */
-  animation: float 3s ease-in-out infinite, colorChange 6s linear infinite;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-               0 0 20px rgba(255, 255, 255, 0.6), 
-               0 0 30px rgba(255, 255, 255, 0.4);
-  transition: text-shadow 0.3s ease-in-out;
-}
-
-.jumbotron h1:hover {
-  text-shadow: 0 0 15px rgba(255, 255, 255, 1), 
-               0 0 25px rgba(255, 255, 255, 0.8), 
-               0 0 35px rgba(255, 255, 255, 0.6);
-}
-
-/* Animasi mengapung */
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Animasi perubahan warna teks */
-@keyframes colorChange {
-  0% {
-    color: #ff0000; /* Warna awal */
-  }
-  25% {
-    color: #00ff00; /* Warna kedua */
-  }
-  50% {
-    color: #0000ff; /* Warna ketiga */
-  }
-  75% {
-    color: #ff00ff; /* Warna keempat */
-  }
-  100% {
-    color: #ff0000; /* Kembali ke warna awal */
-  }
-}
 
 
 .container {
@@ -186,160 +133,171 @@ body {
   margin: 0 auto;
 }
 
-/* Atur .about-section agar memiliki latar belakang penuh pada sisi kiri dan kanan */
-.about-section {
-  background-color: #D7FFB7;
-  margin-top: -2rem;
-  padding: 2rem 5rem; /* Atur padding pada sisi kiri dan kanan */
-  width: calc(100% + 14rem); /* Lebar penuh ditambah margin kiri dan kanan */
-  position: relative;
-  left: -7rem; /* Pindahkan posisi relatif ke kiri untuk menutup margin */
-}
-
-.about-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem; /* Padding dalam container */
-}
-
-.about-section h2 {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.about-section p.subtitle {
-  text-align: center;
-}
-
-/* Tambahkan padding dan margin untuk .section dan .container untuk memastikan konsistensi */
 .section {
-  padding: 2rem 0;
+  padding: 8rem 0;
+  text-align: center;
 }
 
-.section .container {
+.container {
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
-.section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
+h2 {
+  font-size: 3rem;
   color: #397405;
-  text-align: center;
   margin-bottom: 1rem;
 }
 
-.section h2 span {
-  color: #5BCD00; /* Perubahan warna */
+h2 span {
+  color: #5BCD00;
 }
 
-.section p.subtitle {
-  font-size: 1.3rem;
-  color: var(--secondary-text-color);
-  text-align: center;
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
   margin-bottom: 2rem;
 }
 
-/* Gaya untuk .about-section dan .why-us-content agar menjadi card */
-.section .about-section, .section .why-us-content {
+.product-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 2rem;
 }
 
-.section .why-us-content {
-  justify-content: space-between;
-}
-
-/* Gaya card */
-.card {
+.product-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  text-align: center;
+  overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer; /* Pointer cursor untuk interaksi klik */
+  width: calc(33.333% - 2rem);
+  max-width: 350px;
+  position: relative;
 }
 
-.card:hover {
+.product-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
+.product-image {
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
   height: 200px;
-  margin-bottom: 1rem;
+  object-fit: cover;
 }
 
-.card h3 {
+.product-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #397405;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
-.card p {
+.product-card p {
   font-size: 1rem;
-  color: var(--secondary-text-color);
-  margin-bottom: 1rem;
+  color: #666;
+  margin: 0 1rem 1rem 1rem;
 }
 
-.section .why-us-content .reasons {
+.learn-more {
+  background-color: #397405;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 1rem auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+  background-color: #5BCD00;
+}
+
+.product-details {
+  display: none;
+  padding: 1rem;
+  text-align: left;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.product-details h4 {
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+.product-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-details ul li {
+  margin: 0.5rem 0;
+}
+
+.gallery {
+  margin-top: 1rem;
+}
+
+.gallery h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   justify-content: center;
+  gap: 1rem;
 }
 
-.section .why-us-content .reasons .reason {
-  flex: 1 1 calc(33.333% - 2rem); /* Tiga card per baris */
-  max-width: calc(33.333% - 2rem);
-}
-
-/* General Styles for the Image */
-.why-us-content .why-us-info img {
-  width: 100%;
+.gallery-images img {
+  width: calc(50% - 0.5rem);
+  height: auto;
   border-radius: 10px;
-  object-fit: cover;
-  height: 370px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Tablet Styles (max-width: 768px) */
+.gallery-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .why-us-content .why-us-info img {
-    height: 360px; /* Increased height for tablet screens */
+  .product-card {
+    width: calc(50% - 2rem);
   }
-
-  .section .why-us-content .reasons .reason {
-    flex: 1 1 calc(50% - 2rem); /* Dua card per baris pada tablet */
-    max-width: calc(50% - 2rem);
+  .gallery-images img {
+    width: calc(100% - 0.5rem);
   }
 }
 
-/* Mobile Styles (max-width: 480px) */
 @media (max-width: 480px) {
-  .why-us-content .why-us-info img {
-    height: 425px; /* Increased height for mobile screens */
-  }
-
-  .section .why-us-content .reasons .reason {
-    flex: 1 1 100%; /* Satu card per baris pada mobile */
-    max-width: 100%;
+  .product-card {
+    width: 100%;
   }
 }
 
-/* Animasi saat card diklik */
-.card:active {
-  transform: scale(0.95);
-  transition: transform 0.1s;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 2rem);
+  }
 }
 
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}
 
 
 #company-adv {

@@ -233,6 +233,119 @@ h2::after {
     font-size: 1.3rem;
   }
 }
+
+#company-adv {
+    position: relative;
+    overflow: hidden;
+    background-image: url("../img/advantages-leaves-left.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#company-adv-container {
+    max-width: 1200px;
+    background-image: url("../img/adv-floating-leaves-right.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Footer */
+
+.footer-info {
+  font-size: 15px;
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.footer-info .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.footer-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+}
+
+.footer-info-col {
+  flex: 1 0 300px;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-left: 30px; /* Add margin-left to shift to the right */
+  color: #000000;
+}
+
+
+.footer-info-col h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease-in-out; /* Add animation */
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-info-col ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-info-col li {
+  margin-bottom: 10px;
+}
+
+.footer-info-col a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-info-col a:hover {
+  color: #3c5a00;
+}
+
+.footer-image {
+  max-width: 15%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.footer-image2 {
+  max-width: 45%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.footer-image3 {
+  max-width: 35%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+
 .footer-copyright {
   text-align: center;
   padding: 20px 0;
@@ -250,6 +363,28 @@ h2::after {
   height: 0.1rem; /* Tinggi garis */
   background-color: #513c28; /* Warna garis */
 }
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #000000;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #3c5a00;
+}
+
+
+.footer-copyright p {
+ 
+  margin: 10px;
+  color: #000000;
+}
+
 
 /* Media Queries */
 /* Laptop */

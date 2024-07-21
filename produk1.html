@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedana Tea</title>
+    <link rel="icon" href="./img/footerlogo.png" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="./css/produk1.css" />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Wedana<span>Tea</span></a>
+
+      <div class="navbar-nav">
+        <a href="./index.html">Home</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">About Us</a>
+          <div class="dropdown-content">
+            <a href="./aboutus.html">About Us Wedana</a>
+            <a href="./about.html">Our Team</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Product</a>
+          <div class="dropdown-content">
+            <a href="./produk1.html">Ready to Serve Product</a>
+            <a href="./produk2.html"> Raw Material Products</a>
+          </div>
+        </div>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <!-- Navbar end -->
+
+    <!-- Hero Section end -->
+
+    <!-- About Section start -->
+    <main>
+      <section id="products" class="section">
+        <div class="container">
+          <div id="company-adv">
+            <div id="company-adv-container">
+              <h2>Our <span>Products</span></h2>
+              <p class="subtitle">
+                Ready to serve product: We provide superior tea products that
+                are conveniently and elegantly packaged, so you don't have to
+                worry about products that are well packaged and branded to be
+                ready for immediate marketing.
+              </p>
+              <div class="product-content">
+                <!-- Green Tea Card -->
+                <div class="product-card">
+                  <img
+                    src="./img/menu/greentea.jpeg"
+                    alt="Green Tea"
+                    class="product-image"
+                  />
+                  <h3>Green Tea</h3>
+                  <p>
+                    Green tea, with the Latin name Camellia sinensis, is a
+                    popular beverage in Indonesia, Japan, and China. Green tea
+                    is a type of tea that has undergone minimal oxidation during
+                    processing.
+                  </p>
+                  <button
+                    class="learn-more"
+                    onclick="toggleDetails('green-tea-details')"
+                  >
+                    Learn More
+                  </button>
+                  <div id="green-tea-details" class="product-details">
+                    <h4>Green Tea and Its Nutritional Content</h4>
+                    <p>
+                      In 100 grams of green tea, there are almost no calories,
+                      but the following nutrients are present:
+                    </p>
+                    <ul>
+                      <li>300 kcal of energy</li>
+                      <li>0.2 grams of protein</li>
+                      <li>1 milligram of magnesium</li>
+                      <li>6 milligrams of potassium</li>
+                      <li>12 milligrams of caffeine</li>
+                    </ul>
+                    <p>
+                      In addition, green tea also contains vitamin B, vitamin C,
+                      and various active compounds that are antioxidant,
+                      anti-inflammatory, and anticancer.
+                    </p>
+                    <!-- Green Tea Gallery -->
+                    <div class="gallery">
+                      <h4>Gallery</h4>
+                      <div class="gallery-images">
+                        <img src="./img/menu/greentea.jpeg" alt="Green Tea 1" />
+                        <img src="./img/menu/greentea.jpeg" alt="Green Tea 2" />
+                        <img src="./img/menu/greentea.jpeg" alt="Green Tea 3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Black Tea Card -->
+                <div class="product-card">
+                  <img
+                    src="./img/menu/blacktea.jpeg"
+                    alt="Black Tea"
+                    class="product-image"
+                  />
+                  <h3>Black Tea</h3>
+                  <p>
+                    The production of black tea involves a process called
+                    oxidation, which transforms the green leaves of Camellia
+                    sinensis into a brownish-black hue.
+                  </p>
+                  <button
+                    class="learn-more"
+                    onclick="toggleDetails('black-tea-details')"
+                  >
+                    Learn More
+                  </button>
+                  <div id="black-tea-details" class="product-details">
+                    <h4>Black Tea Nutritional Content</h4>
+                    <ul>
+                      <li>Calories: 293</li>
+                      <li>Water: 8 g</li>
+                      <li>Protein: 24.5 grams</li>
+                      <li>Carbohydrates: 58.8 grams</li>
+                      <li>Fiber: 8.7 grams</li>
+                      <li>Calcium: 327 grams</li>
+                      <li>Phosphorus: 313 mg</li>
+                      <li>Potassium: 5854.8 mg</li>
+                      <li>Beta carotene: 2700 mcg</li>
+                      <li>Niacin (Vitamin B): 7.6 mg</li>
+                      <li>Vitamin C: 9 mg</li>
+                    </ul>
+                    <!-- Black Tea Gallery -->
+                    <div class="gallery">
+                      <h4>Gallery</h4>
+                      <div class="gallery-images">
+                        <img src="./img/menu/blacktea.jpeg" alt="Black Tea 1" />
+                        <img src="./img/menu/blacktea.jpeg" alt="Black Tea 2" />
+                        <img src="./img/menu/blacktea.jpeg" alt="Black Tea 3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Jasmine Tea Card -->
+                <div class="product-card">
+                  <img
+                    src="./img/menu/jasminetea.jpeg"
+                    alt="Jasmine Tea"
+                    class="product-image"
+                  />
+                  <h3>Jasmine Tea</h3>
+                  <p>
+                    Jasmine tea is a beverage produced by infusing green or
+                    black tea with jasmine flowers, resulting in an enhanced
+                    aromatic profile.
+                  </p>
+                  <button
+                    class="learn-more"
+                    onclick="toggleDetails('jasmine-tea-details')"
+                  >
+                    Learn More
+                  </button>
+                  <div id="jasmine-tea-details" class="product-details">
+                    <p>
+                      Jasmine tea is a rich source of vitamins and antioxidants.
+                      This tea boasts a fragrant and refreshing aroma and
+                      flavor. Furthermore, jasmine tea is thought to confer a
+                      number of health benefits.
+                    </p>
+                    <!-- Jasmine Tea Gallery -->
+                    <div class="gallery">
+                      <h4>Gallery</h4>
+                      <div class="gallery-images">
+                        <img
+                          src="./img/menu/jasminetea.jpeg"
+                          alt="Jasmine Tea 1"
+                        />
+                        <img
+                          src="./img/menu/jasminetea.jpeg"
+                          alt="Jasmine Tea 2"
+                        />
+                        <img
+                          src="./img/menu/jasminetea.jpeg"
+                          alt="Jasmine Tea 3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-info">
+        <div class="container">
+          <div class="footer-info-row">
+            <div class="footer-info-col">
+              <h3>INFORMATION</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Product</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-info-col">
+              <h3>CONTACT US</h3>
+              <p>Wedana Tea Indonesia</p>
+              <p>JL. Raya Tegal - Pemalang Km 4, Kel. Padaharja,</p>
+              <p>Kec. Kramat, Kab. Tegal, Prov. Jawa Tengah 52181</p>
+              <p>
+                <a href="mailto:cswedanatea24@gmail.com"
+                  >cswedanatea24@gmail.com</a
+                >
+                (0283) 311938 / 39
+              </p>
+              <p>Write to us: +62878-8893-9492</p>
+              <div class="socials">
+                <a href="#"><i data-feather="instagram"></i></a>
+                <a href="#"><i data-feather="twitter"></i></a>
+                <a href="#"><i data-feather="facebook"></i></a>
+                <a href="#"><i data-feather="mail"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-info-col">
+              <h3>Suporrted & Certified</h3>
+              <img
+                src="./img/ministry.png"
+                alt="Find Us"
+                class="footer-image"
+              />
+              <img src="./img/min2.png" alt="Find Us" class="footer-image2" />
+              <img src="./img/min3.png" alt="Find Us" class="footer-image3" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2024 Wedana Tea Indonesia. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
