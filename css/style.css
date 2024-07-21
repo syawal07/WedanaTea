@@ -495,6 +495,31 @@ body {
 .contact .row form .input-group input::placeholder {
   color: rgba(0, 0, 0, 0.5); /* Placeholder text color */
 }
+.contact .row form .input-group input,
+.contact .row form .input-group textarea {
+  flex: 1; /* Takes the remaining space */
+  padding: 1rem;
+  font-size: 1.6rem;
+  background: none;
+  color: #000;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+}
+
+.contact .row form .input-group input::placeholder,
+.contact .row form .input-group textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Placeholder text color */
+  /* Ensure placeholder text is vertically centered */
+  display: flex;
+  align-items: center;
+}
+
+.contact .row form .input-group textarea {
+  resize: vertical; /* Allows resizing only vertically */
+  min-height: 250px; /* Minimum height for the textarea */
+}
+
 
 .contact .row form .btn {
   margin-top: 3rem;

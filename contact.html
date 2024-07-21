@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My Style -->
-    <link rel="stylesheet" href="./css/aboutus.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
   </head>
 
   <body>
@@ -52,6 +52,7 @@
     </nav>
 
     <!-- Navbar end -->
+
     <main>
       <!-- Jumbotron start -->
       <div class="jumbotron">
@@ -72,68 +73,45 @@
         </div>
       </section>
 
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="contact">
+            <div class="row">
+              <form action="">
+                <div class="input-group">
+                  <i data-feather="user" class="icon"></i>
+                  <input type="text" placeholder="Name" />
+                </div>
+                <div class="input-group">
+                  <i data-feather="mail" class="icon"></i>
+                  <input type="email" placeholder="Email" />
+                </div>
+                <div class="input-group">
+                  <i data-feather="phone" class="icon"></i>
+                  <input type="text" placeholder="No Hp" />
+                </div>
+                <div class="input-group">
+                  <i data-feather="file-text" class="icon"></i>
+                  <textarea placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+              </form>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="map"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="why-us" class="section">
         <div class="container">
           <div id="company-adv">
-            <div id="company-adv-container">
-              <h2>Why <span>Us?</span></h2>
-              <p class="subtitle">Several reasons why you should choose us:</p>
-              <div class="why-us-content">
-                <div class="reasons">
-                  <div class="reason card">
-                    <img
-                      src="./img/card.jpg"
-                      alt="Reason Image"
-                      class="reason-image"
-                    />
-                    <h3>01. <span>Unsurpassed Quality</span></h3>
-                    <p>
-                      Indonesian tea is known worldwide for its exceptional
-                      quality and taste. Our products set the highest standards.
-                    </p>
-                  </div>
-                  <div class="reason card">
-                    <img
-                      src="./img/card.jpg"
-                      alt="Reason Image"
-                      class="reason-image"
-                    />
-                    <h3>02. <span>Sustainable Supply</span></h3>
-                    <p>
-                      Indonesia's tropical climate and vast agricultural lands
-                      ensure a consistent and sustainable supply of tea
-                      throughout the year to meet international market demands.
-                    </p>
-                  </div>
-                  <div class="reason card">
-                    <img
-                      src="./img/card.jpg"
-                      alt="Reason Image"
-                      class="reason-image"
-                    />
-                    <h3>03. <span>Competitive Pricing</span></h3>
-                    <p>
-                      Benefit from a competitive pricing structure that
-                      maximizes your margins and ensures cost effectiveness in
-                      your supply chain.
-                    </p>
-                  </div>
-                  <div class="reason card">
-                    <img
-                      src="./img/card.jpg"
-                      alt="Reason Image"
-                      class="reason-image"
-                    />
-                    <h3>04. <span>Commitment to Quality Assurance</span></h3>
-                    <p>
-                      Our rigorous quality assurance practices ensure that you
-                      receive tea products of the highest standard, meeting
-                      international quality benchmarks.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div id="company-adv-container"></div>
           </div>
         </div>
       </section>
@@ -191,6 +169,7 @@
         <p>&copy; 2024 Wedana Tea Indonesia. All Rights Reserved.</p>
       </div>
     </footer>
+    <!-- Footer end -->
 
     <!-- Feather Icons -->
     <script>
@@ -198,6 +177,6 @@
     </script>
 
     <!-- My Javascript -->
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

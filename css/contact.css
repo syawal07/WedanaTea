@@ -124,7 +124,60 @@ body {
   display: none;
 }
 
+/* Jumbotron */
+.jumbotron {
+  background: url('../img/jb.png') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 12rem 0;
+}
 
+.jumbotron h1 {
+  font-size: 3.5rem; /* Memperbesar ukuran font */
+  animation: float 3s ease-in-out infinite, colorChange 6s linear infinite;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+               0 0 20px rgba(255, 255, 255, 0.6), 
+               0 0 30px rgba(255, 255, 255, 0.4);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.jumbotron h1:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 1), 
+               0 0 25px rgba(255, 255, 255, 0.8), 
+               0 0 35px rgba(255, 255, 255, 0.6);
+}
+
+/* Animasi mengapung */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Animasi perubahan warna teks */
+@keyframes colorChange {
+  0% {
+    color: #ff0000; /* Warna awal */
+  }
+  25% {
+    color: #00ff00; /* Warna kedua */
+  }
+  50% {
+    color: #0000ff; /* Warna ketiga */
+  }
+  75% {
+    color: #ff00ff; /* Warna keempat */
+  }
+  100% {
+    color: #ff0000; /* Kembali ke warna awal */
+  }
+}
 
 
 .container {
@@ -133,129 +186,158 @@ body {
   margin: 0 auto;
 }
 
-.section {
-  padding: 10rem 0;
+/* Atur .about-section agar memiliki latar belakang penuh pada sisi kiri dan kanan */
+.about-section {
+  background-color: #D7FFB7;
+  margin-top: -2rem;
+  padding: 2rem 5rem; /* Atur padding pada sisi kiri dan kanan */
+  width: calc(100% + 14rem); /* Lebar penuh ditambah margin kiri dan kanan */
+  position: relative;
+  left: -7rem; /* Pindahkan posisi relatif ke kiri untuk menutup margin */
+}
+
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Padding dalam container */
+}
+
+.about-section h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.about-section p.subtitle {
   text-align: center;
 }
 
-
-/* Raw Material Products Styles */
-#raw-material-products {
-  background-color: #e9f5e9;
-  padding: 10rem 0;
-  position: relative;
+/* Tambahkan padding dan margin untuk .section dan .container untuk memastikan konsistensi */
+.section {
+  padding: 2rem 0;
 }
 
-#raw-material-products-container {
+.section .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-#raw-material-products-container h2 {
-  font-size: 3rem;
+.section h2 {
+  font-size: 2.5rem;
   font-weight: 700;
   color: #397405;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-#raw-material-products-container h2 span {
-  color: var(--primary);
+.section h2 span {
+  color: #5BCD00; /* Perubahan warna */
 }
 
-#raw-material-products-container p.subtitle {
-  font-size: 1.5rem;
-  color: #333;
+.section p.subtitle {
+  font-size: 1.3rem;
+  color: var(--secondary-text-color);
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.raw-material-content {
+/* Contact Section */
+.contact .row {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  flex-direction: column; /* Arrange vertically */
+  margin-top: 2rem;
+  background-color: #222;
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Ensure rounded corners are applied */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
 }
 
-.raw-material-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  overflow: hidden;
-}
-
-.raw-material-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-.raw-material-image {
+.contact .row form {
+  padding: 2rem;
+  text-align: left; /* Align text to the left */
+  background-color: #fff;
+  border-radius: 12px 12px 0 0; /* Rounded corners on the top */
   position: relative;
 }
 
-.raw-material-img {
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border */
+  padding-left: 2.5rem; /* Increase padding for better spacing */
+  border-radius: 12px;
+  border: 1px solid #000000;
+  position: relative; /* Ensure the icon positioning is relative to the input group */
+}
+
+.contact .row form .input-group .icon {
+  position: absolute;
+  top: 50%; /* Position the icon at the vertical center */
+  left: 1rem; /* Space between the icon and the left edge */
+  transform: translateY(-50%); /* Center the icon vertically */
+  color: #000;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.contact .row form .input-group input,
+.contact .row form .input-group textarea {
+  flex: 1; /* Takes the remaining space */
+  padding: 1rem;
+  font-size: 1.6rem;
+  background: none;
+  color: #000;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+}
+
+.contact .row form .input-group input::placeholder,
+.contact .row form .input-group textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Placeholder text color */
+  /* Ensure placeholder text is vertically centered */
+  display: flex;
+  align-items: center;
+}
+
+.contact .row form .input-group textarea {
+  resize: vertical; /* Allows resizing only vertically */
+  min-height: 250px; /* Minimum height for the textarea */
+}
+
+.contact .row form .btn {
+  margin-top: 2rem; /* Adjusted for spacing */
+  padding: 1.5rem 4rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #173202;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  border: 2px solid #000000;
+  display: inline-block; /* Make sure the button aligns to the left */
+}
+
+
+
+.contact .row .map {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 15px;
-  transition: transform 0.4s ease;
+  height: 400px; /* Set a fixed height for the map */
+  border-radius: 0 0 12px 12px; /* Rounded corners at the bottom */
+  border: none;
 }
 
-.raw-material-card:hover .raw-material-img {
-  transform: scale(1.1);
-}
-
-.raw-material-info {
-  padding: 1.5rem;
-}
-
-.raw-material-info h3 {
-  font-size: 2.5rem;
-  color: #397405;
-  margin-bottom: 1rem;
-}
-
-.raw-material-info h3 span {
-  color: var(--primary);
-}
-
-.advantage {
-  margin-bottom: 2rem;
-}
-
-.advantage h4 {
-  font-size: 1.8rem;
-  color: #397405;
-  margin-bottom: 0.5rem;
-  transition: font-size 0.3s ease, color 0.3s ease;
-}
-
-.advantage p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.raw-material-card:hover .advantage h4 {
-  font-size: 2rem;
-  color: var(--primary);
-}
-
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .raw-material-card {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "image"
-      "info";
+  .contact .row {
+    flex-direction: column; /* Ensures vertical layout on smaller screens */
   }
 
-  .raw-material-info, .raw-material-image {
-    order: unset;
+  .contact .row .map {
+    margin-top: 2rem;
+    height: 300px; /* Adjust height for smaller screens */
   }
 }
 
