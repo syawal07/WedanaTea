@@ -110,72 +110,184 @@
     </section>
     <!-- About Section end -->
 
-    <!-- Products Section start -->
-    <section id="products" class="products">
-      <div id="company-adv">
-        <div id="company-adv-container">
-          <h2>Our <span>Products</span></h2>
-          <div class="row">
-            <div class="product-card">
-              <div class="product-image">
-                <img
-                  src="https://tongtji.co.id/tongtji/tea_jasmine.png"
-                  alt="Tea 1"
-                />
-              </div>
+    <main>
+      <section id="products" class="section">
+        <div class="container">
+          <div id="company-adv">
+            <div id="company-adv-container">
+              <h2>Our <span>Products</span></h2>
+              <p class="subtitle">
+                Ready to serve product: We provide superior tea products that
+                are conveniently and elegantly packaged, so you don't have to
+                worry about products that are well packaged and branded to be
+                ready for immediate marketing.
+              </p>
               <div class="product-content">
-                <h3>Green Tea</h3>
-                <p>
-                  Discover the fresh and vibrant flavors of our premium Green
-                  Tea, sourced from the finest tea gardens in Indonesia.
-                </p>
-                <a href="#" class="btn">View More...</a>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <img
-                  src="https://tongtji.co.id/tongtji/tea_blacktea.png"
-                  alt="Tea 2"
-                />
-              </div>
-              <div class="product-content">
-                <h3>Black Tea</h3>
-                <p>
-                  Experience the rich and robust taste of our Black Tea, crafted
-                  to perfection for a satisfying brew every time.
-                </p>
-                <a href="#" class="btn">View More...</a>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <img
-                  src="https://tongtji.co.id/tongtji/tea_greentea.png"
-                  alt="Tea 3"
-                />
-              </div>
-              <div class="product-content">
-                <h3>Jasmine Tea</h3>
-                <p>
-                  Indulge in the natural goodness of our Herbal Tea, a perfect
-                  blend of traditional herbs and modern flavors.
-                </p>
-                <a href="#" class="btn">View More...</a>
+                <!-- Green Tea Card -->
+                <div class="product-card">
+                  <img
+                    src="./img/menu/greentea.png"
+                    alt="Green Tea"
+                    class="product-image"
+                  />
+                  <h3>Green Tea</h3>
+                  <p>
+                    Green tea, with the Latin name Camellia sinensis, is a
+                    popular beverage in Indonesia, Japan, and China. Green tea
+                    is a type of tea that has undergone minimal oxidation during
+                    processing. The shorter processing time results in a milder
+                    flavor profile and helps maintain the integrity of
+                    beneficial chemical compounds. Green tea is one of the most
+                    well-known types of tea. Green tea leaves do not undergo
+                    significant fermentation after picking, thus retaining their
+                    green color and antioxidant content.
+                  </p>
+                  <button
+                    class="learn-more"
+                    onclick="toggleDetails('green-tea-details')"
+                  >
+                    Learn More
+                  </button>
+                  <div id="green-tea-details" class="product-details">
+                    <h4>Green Tea and Its Nutritional Content</h4>
+                    <p>
+                      In 100 grams of green tea, there are almost no calories,
+                      but the following nutrients are present:
+                    </p>
+                    <ul>
+                      <li>300 kcal of energy</li>
+                      <li>0.2 grams of protein</li>
+                      <li>1 milligram of magnesium</li>
+                      <li>6 milligrams of potassium</li>
+                      <li>12 milligrams of caffeine</li>
+                    </ul>
+                    <p>
+                      In addition, green tea also contains vitamin B, vitamin C,
+                      and various active compounds that are antioxidant,
+                      anti-inflammatory, and anticancer.
+                    </p>
+                    <!-- Green Tea Gallery -->
+                    <div class="gallery">
+                      <h4>Gallery</h4>
+                      <div class="gallery-images">
+                        <img src="./img/menu/greentea.png" alt="Green Tea 1" />
+                        <img src="./img/menu/greentea.png" alt="Green Tea 2" />
+                        <img src="./img/menu/greentea.png" alt="Green Tea 3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Black Tea Card -->
+                <div class="product-card">
+                  <img
+                    src="./img/menu/blacktea.png"
+                    alt="Black Tea"
+                    class="product-image"
+                  />
+                  <h3>Black Tea</h3>
+                  <p>
+                    The production of black tea involves a process called
+                    oxidation, which transforms the green leaves of Camellia
+                    sinensis into a brownish-black hue. The term "black tea" is
+                    derived from its dark color. Black tea undergoes complete
+                    fermentation after picking, giving it a distinctive flavor
+                    and a darker color than green tea.
+                  </p>
+                  <button
+                    class="learn-more"
+                    onclick="toggleDetails('black-tea-details')"
+                  >
+                    Learn More
+                  </button>
+                  <div id="black-tea-details" class="product-details">
+                    <h4>Black Tea Nutritional Content</h4>
+                    <ul>
+                      <li>Calories: 293</li>
+                      <li>Water: 8 g</li>
+                      <li>Protein: 24.5 grams</li>
+                      <li>Carbohydrates: 58.8 grams</li>
+                      <li>Fiber: 8.7 grams</li>
+                      <li>Calcium: 327 grams</li>
+                      <li>Phosphorus: 313 mg</li>
+                      <li>Potassium: 5854.8 mg</li>
+                      <li>Beta carotene: 2700 mcg</li>
+                      <li>Niacin (Vitamin B): 7.6 mg</li>
+                      <li>Vitamin C: 9 mg</li>
+                    </ul>
+                    <!-- Black Tea Gallery -->
+                    <div class="gallery">
+                      <h4>Gallery</h4>
+                      <div class="gallery-images">
+                        <img src="./img/menu/blacktea.png" alt="Black Tea 1" />
+                        <img src="./img/menu/blacktea.png" alt="Black Tea 2" />
+                        <img src="./img/menu/blacktea.png" alt="Black Tea 3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Jasmine Tea Card -->
+                <div class="product-card">
+                  <img
+                    src="./img/menu/jasminetea.png"
+                    alt="Jasmine Tea"
+                    class="product-image"
+                  />
+                  <h3>Jasmine Tea</h3>
+                  <p>
+                    Jasmine tea is a beverage produced by infusing green or
+                    black tea with jasmine flowers, resulting in an enhanced
+                    aromatic profile. Jasmine tea is a rich source of vitamins
+                    and antioxidants. This tea boasts a fragrant and refreshing
+                    aroma and flavor. Furthermore, jasmine tea is thought to
+                    confer a number of health benefits.
+                  </p>
+                  <button
+                    class="learn-more"
+                    onclick="toggleDetails('jasmine-tea-details')"
+                  >
+                    Learn More
+                  </button>
+                  <div id="jasmine-tea-details" class="product-details">
+                    <p>
+                      Jasmine tea is a rich source of vitamins and antioxidants.
+                      This tea boasts a fragrant and refreshing aroma and
+                      flavor. Furthermore, jasmine tea is thought to confer a
+                      number of health benefits.
+                    </p>
+                    <!-- Jasmine Tea Gallery -->
+                    <div class="gallery">
+                      <h4>Gallery</h4>
+                      <div class="gallery-images">
+                        <img
+                          src="./img/menu/jasminetea.png"
+                          alt="Jasmine Tea 1"
+                        />
+                        <img
+                          src="./img/menu/jasminetea.png"
+                          alt="Jasmine Tea 2"
+                        />
+                        <img
+                          src="./img/menu/jasminetea.png"
+                          alt="Jasmine Tea 3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Products Section end -->
+      </section>
+    </main>
 
     <!-- Contact Section start -->
     <section id="contact" class="contact">
       <div id="company-adv">
         <div id="company-adv-container">
           <h2><span>Contact</span> Us</h2>
-          <p>"Partner with a Professional and Service-Oriented Team"</p>
           <div class="row">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
@@ -199,7 +311,6 @@
                 <input type="text" placeholder="No Hp" />
               </div>
               <div class="input-group">
-                <i data-feather="file-text" class="icon"></i>
                 <textarea placeholder="Message"></textarea>
               </div>
               <button type="submit" class="btn">Send Message</button>

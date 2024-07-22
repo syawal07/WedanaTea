@@ -307,140 +307,172 @@ body {
 }
 
 
-/* Menu Section */
-.menu h2,
-.products h2,
-.contact h2 {
+.section {
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #397405;
   margin-bottom: 1rem;
 }
-.menu p,
-.products p,
-.contact p {
-  text-align: center;
-  max-width: 30rem;
-  margin: auto;
-  font-weight: 100;
-  line-height: 1.6;
+
+h2 span {
+  color: #5BCD00;
 }
 
-.menu .row {
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.product-content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
-  justify-content: center;
+  justify-content: space-around;
+  gap: 2rem;
 }
 
-.menu .row .menu-card {
-  text-align: center;
-  padding-bottom: 4rem;
-}
-
-.menu .row .menu-card img {
-  border-radius: 50%;
-  width: 80%;
-}
-
-.menu .row .menu-card .menu-card-title {
-  margin: 1rem auto 0.5rem;
-}
-
-
-
-/* Bagian Produk */
-
-.products .row {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0rem;
-  overflow-x: auto;
-  padding: 1rem 0;
-  scroll-snap-type: x mandatory; /* Aktifkan snap scroll horizontal */
-}
-
-.products .product-card {
-  text-align: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-image: url('../img/card.jpg'); 
-  background-size: cover;
-  background-position: center;
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 0 0 auto;
-  min-width: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(33.333% - 2rem);
+  max-width: 350px;
+  position: relative;
 }
 
-
-.products .product-card:hover {
-  transform: translateY(-5px);
+.product-card:hover {
+  transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-.products .product-icons a:hover {
-  background-color: #666;
+.product-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #397405;
+  margin: 1rem 0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 1rem 1rem 1rem;
+  text-align: justify; /* Rata kiri dan kanan */
+}
+.learn-more {
+  background-color: #397405;
   color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 1rem auto;
+  display: block;
+  transition: background-color 0.3s;
 }
 
-.products .product-image {
-  padding: 1rem 0;
-  position: relative;
-  overflow: hidden;
+.learn-more:hover {
+  background-color: #5BCD00;
 }
 
-.products .product-image img {
-  height: 12rem; /* Atur tinggi gambar sesuai kebutuhan yang lebih kecil */
-  width: auto;
-  max-width: 100%;
-  border-radius: 1rem; /* Tambahkan border-radius untuk membuat sudut-sudut gambar melengkung */
-  transition: transform 0.3s ease;
+.product-details {
+  display: none;
+  padding: 1rem;
+  text-align: left;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.product-details h4 {
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+.product-details ul {
+  list-style-type: disc; /* Menambahkan titik bulat */
+  padding-left: 2rem; /* Menggeser teks ke kanan */
+  margin: 0;
+}
+
+.product-details ul li {
+  margin: 0.5rem 0;
 }
 
 
-.products .product-image img:hover {
-  transform: scale(1.1); /* Efek zoom pada hover */
+.gallery {
+  margin-top: 1rem;
 }
 
-
-.products .product-image img:hover {
-  transform: scale(1.1); /* Efek zoom pada hover */
+.gallery h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.products .product-content h3 {
-  font-size: 1.8rem;
-  margin-top: 0.5rem;
-  color: #000000;
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.products .product-content p {
-  color: #000000;
-  font-size: 12px;
-  font-weight: 500;
-}
-.product-content .btn {
-  display: inline-block;
-  padding: 1rem 2.5rem; /* Increased padding */
-  background-color: #5BCD00; /* Background color on hover */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
-  margin-top: 1rem; /* Added margin to move the button down */
-   font-size: 1.2rem; /* Increased font size */
+.gallery-images img {
+  width: calc(50% - 0.5rem);
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Media query for mobile devices */
+.gallery-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .product-content .btn {
-    padding: 1.2rem 3rem; /* Further increased padding for mobile */
-    margin-top: 1.2rem; /* Adjusted margin for mobile */
+  .product-card {
+    width: calc(50% - 2rem);
+  }
+  .gallery-images img {
+    width: calc(100% - 0.5rem);
   }
 }
 
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 2rem);
+  }
+}
 
-.product-content .btn:hover {
-  background-color: var(--primary); /* Warna latar saat tombol dihover */
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
 }
 
 
@@ -527,7 +559,7 @@ body {
   padding: 1.5rem 4rem;
   font-size: 1.6rem;
   color: #fff;
-  background-color: #173202;
+  background-color: #5BCD00;
   cursor: pointer;
   border: none;
   border-radius: 12px;
@@ -535,9 +567,7 @@ body {
   border: 2px solid #000000;
 }
 
-.contact .row form .btn:hover {
-  background-color: #ff8c00; /* Darker background on hover */
-}
+
 
 
 /* Footer */

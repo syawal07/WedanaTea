@@ -127,11 +127,6 @@ body {
 
 
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .section {
   padding: 8rem 0;
@@ -200,6 +195,7 @@ h2 span {
   font-size: 1rem;
   color: #666;
   margin: 0 1rem 1rem 1rem;
+  text-align: justify; /* Rata kiri dan kanan */
 }
 
 .learn-more {
@@ -233,8 +229,9 @@ h2 span {
 }
 
 .product-details ul {
-  list-style: none;
-  padding: 0;
+  list-style-type: disc; /* Menambahkan titik bulat */
+  padding-left: 2rem; /* Menggeser teks ke kanan */
+  margin: 0;
 }
 
 .product-details ul li {

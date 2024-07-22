@@ -281,6 +281,14 @@ body {
   transition: color 0.3s ease; /* Smooth transition */
 }
 
+.contact .row form .input-group .icon1 {
+  position: absolute;
+  top: 10%; /* Position the icon at the vertical center */
+  left: 1rem; /* Space between the icon and the left edge */
+  transform: translateY(-50%); /* Center the icon vertically */
+  color: #000;
+  transition: color 0.3s ease; /* Smooth transition */
+}
 .contact .row form .input-group input,
 .contact .row form .input-group textarea {
   flex: 1; /* Takes the remaining space */
