@@ -141,7 +141,7 @@ body {
 
 /* Raw Material Products Styles */
 #raw-material-products {
-  background-color: #e9f5e9;
+  background-color: #FAFEF8;
   padding: 10rem 0;
   position: relative;
 }
@@ -211,6 +211,7 @@ body {
 
 .raw-material-info {
   padding: 1.5rem;
+  text-align: justify;
 }
 
 .raw-material-info h3 {
