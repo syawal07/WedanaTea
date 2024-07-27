@@ -248,15 +248,17 @@ body {
 .menu h2 span,
 .products h2 span,
 .contact h2 span {
-  color: #5BCD00;
+  color: var(--primary);
 }
 
 .about .row {
   display: flex;
+  flex-wrap: wrap; /* Menyesuaikan tata letak untuk perangkat kecil */
 }
 
 .about .row .about-img {
   flex: 1 1 45rem;
+  margin-bottom: 2rem; /* Spasi bawah untuk gambar di perangkat kecil */
 }
 
 .about .row .about-img img {
@@ -272,8 +274,6 @@ body {
     transform: translateY(-20px);
   }
 }
-
-
 
 .about .row .content {
   flex: 1 1 35rem;
@@ -295,6 +295,56 @@ body {
   font-weight: 300;
 }
 
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap; /* Untuk membuat galeri responsif */
+}
+
+.photo-card {
+  width: 28%;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.photo-card:active img {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .about .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-gallery {
+    flex-direction: column; /* Mengubah tata letak galeri menjadi vertikal pada perangkat kecil */
+  }
+
+  .photo-card {
+    width: 100%; /* Mengatur lebar kartu foto untuk menyesuaikan dengan layar perangkat kecil */
+    margin-bottom: 2rem; /* Menambahkan spasi di bawah setiap kartu foto pada perangkat kecil */
+  }
+}
+
+
+
 
 .section {
   padding: 8rem 0;
@@ -314,7 +364,7 @@ h2 {
 }
 
 h2 span {
-  color: #5BCD00;
+  color: var(--primary);
 }
 
 .subtitle {
@@ -365,6 +415,7 @@ h2 span {
   margin: 0 1rem 1rem 1rem;
   text-align: justify; /* Rata kiri dan kanan */
 }
+
 .learn-more {
   background-color: #397405;
   color: #fff;
@@ -405,7 +456,6 @@ h2 span {
   margin: 0.5rem 0;
 }
 
-
 .gallery {
   margin-top: 1rem;
 }
@@ -428,6 +478,7 @@ h2 span {
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer; /* Menambahkan pointer cursor untuk gambar */
 }
 
 .gallery-images img:hover {
@@ -449,18 +500,92 @@ h2 span {
   .product-card {
     width: 100%;
   }
+  .gallery-images img {
+    width: calc(100% - 0.5rem); /* Mengatur gambar agar full-width di perangkat kecil */
+  }
 }
 
-/* Responsive Styles */
+.gallery {
+  padding: 8rem 7% 4rem; /* Tambahkan padding ekstra di bagian bawah */
+  background-color: #f5f5f5; /* Latar belakang terang untuk kontras */
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 4rem;
+}
+
+.gallery h2 span {
+  color: var(--primary);
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Sesuaikan jarak antara item */
+  justify-content: center;
+}
+
+.gallery-item {
+  position: relative;
+  width: calc(33.333% - 1.5rem); /* 3 item per baris dengan jarak */
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .gallery-item {
+    width: calc(50% - 1rem); /* 2 item per baris pada layar sedang */
+  }
+}
+
 @media (max-width: 768px) {
-  .product-card {
-    width: calc(50% - 2rem);
+  .gallery-item {
+    width: calc(50% - 1rem); /* 2 item per baris pada layar kecil */
   }
 }
 
 @media (max-width: 480px) {
-  .product-card {
-    width: 100%;
+  .gallery-item {
+    width: 100%; /* Menumpuk item secara vertikal pada layar sangat kecil */
   }
 }
 

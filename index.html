@@ -73,10 +73,8 @@
 
     <!-- Hero Section end -->
 
-    <!-- About Section start -->
-
     <section id="about" class="about">
-      <h2>World Best Quality of <span>Tea Product </span></h2>
+      <h2>World Best Quality of <span>Tea Product</span></h2>
 
       <div class="row">
         <div id="company-adv">
@@ -107,8 +105,20 @@
           </div>
         </div>
       </div>
+
+      <!-- Photo Gallery Section -->
+      <div class="photo-gallery">
+        <div class="photo-card" onclick="animatePhoto(this)">
+          <img src="./img/about/about3.jpg" alt="Tea Image 1" />
+        </div>
+        <div class="photo-card" onclick="animatePhoto(this)">
+          <img src="./img/about/about2.jpg" alt="Tea Image 2" />
+        </div>
+        <div class="photo-card" onclick="animatePhoto(this)">
+          <img src="./img/about/about1.jpg" alt="Tea Image 3" />
+        </div>
+      </div>
     </section>
-    <!-- About Section end -->
 
     <main>
       <section id="products" class="section">
@@ -166,15 +176,6 @@
                       and various active compounds that are antioxidant,
                       anti-inflammatory, and anticancer.
                     </p>
-                    <!-- Green Tea Gallery -->
-                    <div class="gallery">
-                      <h4>Gallery</h4>
-                      <div class="gallery-images">
-                        <img src="./img/menu/greentea.png" alt="Green Tea 1" />
-                        <img src="./img/menu/greentea.png" alt="Green Tea 2" />
-                        <img src="./img/menu/greentea.png" alt="Green Tea 3" />
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -215,15 +216,6 @@
                       <li>Niacin (Vitamin B): 7.6 mg</li>
                       <li>Vitamin C: 9 mg</li>
                     </ul>
-                    <!-- Black Tea Gallery -->
-                    <div class="gallery">
-                      <h4>Gallery</h4>
-                      <div class="gallery-images">
-                        <img src="./img/menu/blacktea.png" alt="Black Tea 1" />
-                        <img src="./img/menu/blacktea.png" alt="Black Tea 2" />
-                        <img src="./img/menu/blacktea.png" alt="Black Tea 3" />
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -251,29 +243,11 @@
                   </button>
                   <div id="jasmine-tea-details" class="product-details">
                     <p>
-                      Jasmine tea is a rich source of vitamins and antioxidants.
-                      This tea boasts a fragrant and refreshing aroma and
-                      flavor. Furthermore, jasmine tea is thought to confer a
-                      number of health benefits.
+                      Jasmine tea is not only known for its delicious taste and
+                      captivating aroma but also for its numerous health
+                      benefits, such as boosting metabolism and providing
+                      antioxidants.
                     </p>
-                    <!-- Jasmine Tea Gallery -->
-                    <div class="gallery">
-                      <h4>Gallery</h4>
-                      <div class="gallery-images">
-                        <img
-                          src="./img/menu/jasminetea.png"
-                          alt="Jasmine Tea 1"
-                        />
-                        <img
-                          src="./img/menu/jasminetea.png"
-                          alt="Jasmine Tea 2"
-                        />
-                        <img
-                          src="./img/menu/jasminetea.png"
-                          alt="Jasmine Tea 3"
-                        />
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -282,6 +256,76 @@
         </div>
       </section>
     </main>
+
+    <section id="gallery" class="gallery">
+      <div id="company-adv">
+        <div id="company-adv-container">
+          <h2>Explore Our <span>Gallery</span> <span>Wedana Tea</span></h2>
+
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <img src="./img/about/tealeaves.jpg" alt="Activity 1" />
+              <div class="gallery-overlay">
+                <h3>Tea Tasting Events</h3>
+                <p>
+                  Join us for exclusive tea tasting events to experience the
+                  full range of our products.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="./img/about/galery1.jpg" alt="Activity 2" />
+              <div class="gallery-overlay">
+                <h3>Tea Production Tour</h3>
+                <p>
+                  Explore our tea production process and see how our
+                  high-quality tea is made.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="./img/about/galery2.jpg" alt="Product 1" />
+              <div class="gallery-overlay">
+                <h3>Premium Green Tea</h3>
+                <p>
+                  Our premium green tea, known for its delicate flavor and
+                  health benefits.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="./img/about/galery3.jpg" alt="Product 2" />
+              <div class="gallery-overlay">
+                <h3>Classic Black Tea</h3>
+                <p>
+                  Experience the bold and robust taste of our classic black tea.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="./img/about/galery4.jpg" alt="Activity 3" />
+              <div class="gallery-overlay">
+                <h3>Tea Workshops</h3>
+                <p>
+                  Participate in our interactive workshops and learn more about
+                  tea brewing.
+                </p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="./img/about/galery5.jpg" alt="Product 3" />
+              <div class="gallery-overlay">
+                <h3>Herbal Infusions</h3>
+                <p>
+                  Discover our range of herbal infusions for a relaxing
+                  experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Section start -->
     <section id="contact" class="contact">
