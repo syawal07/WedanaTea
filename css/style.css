@@ -155,9 +155,6 @@ body {
   background-position: center;
 }
 
-
-
-
 .hero .content {
   position: relative;
   z-index: 2;
@@ -167,16 +164,16 @@ body {
 
 .hero .content h1 {
   font-size: 4rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek shadow pada teks */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
   margin-bottom: 1rem;
-  animation: fadeInUp 1s ease-out; /* Animasi masuk */
+  animation: fadeInUp 1s ease-out; /* Fade-in animation */
 }
 
 .hero .content p {
   font-size: 1.5rem;
   margin-top: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Efek shadow pada teks */
-  animation: fadeInUp 1.5s ease-out; /* Animasi masuk */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow effect */
+  animation: fadeInUp 1.5s ease-out; /* Fade-in animation */
 }
 
 .hero .content .cta {
@@ -189,7 +186,7 @@ body {
   border-radius: 20px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  animation: fadeInUp 2s ease-out; /* Animasi masuk */
+  animation: fadeInUp 2s ease-out; /* Fade-in animation */
 }
 
 .hero .content .cta:hover {
@@ -197,7 +194,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Animasi Fade In Up */
+/* Fade-in Up Animation */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -208,6 +205,7 @@ body {
     transform: translateY(0);
   }
 }
+
 
 
 #company-adv {
@@ -227,72 +225,77 @@ body {
 }
 
 
-
-.about,
-.menu,
-.products,
-.contact {
-  padding: 8rem 7% 1.4rem;
+.about {
+  padding: 10rem 7% 1.4rem;
 }
 
-.about h2,
-.menu h2,
-.products h2,
-.contact h2 {
+.about h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span,
-.menu h2 span,
-.products h2 span,
-.contact h2 span {
+.about h2 span {
   color: var(--primary);
 }
 
-.about .row {
+.about-content {
   display: flex;
-  flex-wrap: wrap; /* Menyesuaikan tata letak untuk perangkat kecil */
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.about .row .about-img {
-  flex: 1 1 45rem;
-  margin-bottom: 2rem; /* Spasi bawah untuk gambar di perangkat kecil */
+.about-item {
+  display: flex;
+  flex-direction: column; /* Agar kartu tersusun secara vertikal */
+  gap: 1rem;
+  align-items: center; /* Menyelaraskan kartu di tengah */
 }
 
-.about .row .about-img img {
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Menyembunyikan konten yang meluber */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 90%; /* Lebarkan kartu sedikit lagi */
+  max-width: 900px; /* Tingkatkan lebar maksimum */
+}
+
+.card-img {
   width: 100%;
-  animation: float 3s ease-in-out infinite;
+  height: 10rem; /* Sesuaikan tinggi untuk menjaga proporsi */
+  object-fit: cover;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+.card-content {
+  padding: 1.5rem; /* Padding yang lebih besar untuk spasi yang lebih baik */
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 1.2rem; /* Sesuaikan ukuran font */
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi untuk klik pada kartu */
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
   }
-  50% {
-    transform: translateY(-20px);
+  to {
+    transform: scale(1.1);
   }
 }
 
-.about .row .content {
-  flex: 1 1 35rem;
-  padding: 0 1rem;
-  text-align: justify; /* Justify text */
-  font-weight: 300;
-}
-
-.about .row .content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.about .row .content p {
-  margin-bottom: 0.8rem;
-  font-size: 1.3rem;
-  font-weight: 100;
-  line-height: 1.6;
-  font-weight: 300;
+.card.clicked {
+  animation: scaleUp 0.3s ease-in-out;
 }
 
 .photo-gallery {
@@ -300,7 +303,7 @@ body {
   justify-content: center;
   gap: 2rem;
   margin-top: 4rem;
-  flex-wrap: wrap; /* Untuk membuat galeri responsif */
+  flex-wrap: wrap;
 }
 
 .photo-card {
@@ -326,6 +329,24 @@ body {
 .photo-card:active img {
   transform: scale(0.95);
 }
+
+/* Media Queries untuk Desain Responsif */
+@media (max-width: 768px) {
+  .about-item {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    max-width: none; /* Hapus lebar maksimum untuk layar kecil */
+  }
+
+  .photo-card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
 
 @media (max-width: 768px) {
   .about .row {
@@ -589,6 +610,42 @@ h2 span {
   }
 }
 
+/* Supported & Certified Section */
+.footer-info-col {
+  text-align: center;
+  padding: 3rem 0; /* Padding around the section */
+  margin-top: 8rem;
+}
+
+.footer-info-col h3 {
+  font-size: 2rem; /* Font size for the title */
+  margin-bottom: 1rem; /* Margin to space out from the logos */
+}
+
+.footer-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between logos */
+  padding: 0; /* No padding around the images */
+}
+
+.footer-images img {
+  width: 120px; /* Logo size for desktop */
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-images img:hover,
+.footer-images img:focus {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .footer-images img {
+    width: 200px; /* Adjusted size for mobile */
+  }
+}
 
 
 /* Contact Section */
