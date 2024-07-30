@@ -949,58 +949,74 @@ section{
   }
 }
 
-.footer{
-    background:var(--black);
+.footer {
+    background: #FBFFF9; /* Black background */
     text-align: center;
+    padding: 2rem 1rem;
 }
 
-.footer .share{
-    padding:1rem 0;
+.footer .share {
+    padding: 1rem 0;
 }
 
-.footer .share a{
+.footer .share a {
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color:#000000;
-    border:var(--border);
-    margin:.3rem;
+    color: #000000; /* White color for icons */
+    border: 2px solid #5BCD00; /* Green border */
+    margin: .3rem;
     border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.footer .share a:hover{
-    background-color: var(--main-color);
+.footer .share a:hover {
+    background-color: #f39c12; /* Orange background on hover */
+    color: #000000; /* White color for icons on hover */
 }
 
-.footer .links{
+.footer .links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding:2rem 0;
-    gap:1rem;
+    padding: 2rem 0;
+    gap: 1rem;
 }
 
-.footer .links a{
-    padding:.7rem 2rem;
-    color:#000000;
-    border:var(--border);
+.footer .links a {
+    padding: .7rem 2rem;
+    color: #000000; /* White text color */
+    border: 2px solid #5BCD00; /* Green border */
     font-size: 2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.footer .links a:hover{
-    background:var(--main-color);
+.footer .links a:hover {
+    background: #f39c12; /* Orange background on hover */
 }
 
-.footer .credit{
+.footer .info {
+    padding: 1rem 0;
+}
+
+.footer .info p {
+    color: #000000; /* White text color */
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+}
+
+.footer .credit {
     font-size: 2rem;
-    color:#000000;
+    color: #000000; /* White text color */
     font-weight: lighter;
-    padding:1.5rem;
+    padding: 1.5rem;
 }
 
-.footer .credit span{
-    color:var(--main-color);
+.footer .credit span {
+    color: #f39c12; /* Orange color for the span */
 }
 
 
