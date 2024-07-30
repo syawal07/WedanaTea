@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wedana Tea</title>
-    <link rel="icon" href="./img/footerlogo.png" type="image/x-icon" />
+    <link rel="icon" href="./images/logo.png" type="image/x-icon" />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,21 +27,17 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- My Style -->
-    <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
-    <!-- Navbar start -->
-    <nav class="navbar">
-      <a href="#" class="navbar-logo">Wedana<span>Tea</span></a>
+    <!-- header section starts  -->
 
-      <div class="navbar-nav">
-        <a href="#home">Home</a>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="" />
+      </a>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
         <div class="dropdown">
           <a href="#" class="dropbtn">About</a>
           <div class="dropdown-content">
@@ -43,73 +52,111 @@
             <a href="./produk2.html"> Raw Material Products</a>
           </div>
         </div>
-        <a href="./contact.html">Contact</a>
+        <a href="#contact">contact</a>
+      </nav>
+
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
       </div>
 
-      <div class="navbar-extra">
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box" class="fas fa-search"></label>
       </div>
-    </nav>
 
-    <!-- Navbar end -->
+      <div class="cart-items-container">
+        <div class="cart-item">
+          <span class="fas fa-times"></span>
+          <img src="images/cart-item-1.png" alt="" />
+          <div class="content">
+            <h3>cart item 01</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <span class="fas fa-times"></span>
+          <img src="images/cart-item-2.png" alt="" />
+          <div class="content">
+            <h3>cart item 02</h3>
+            <div class="price">$12.90/-</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <span class="fas fa-times"></span>
+          <img src="images/cart-item-3.png" alt="" />
+          <div class="content">
+            <h3>cart item 03</h3>
+            <div class="price">$13.19/-</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <span class="fas fa-times"></span>
+          <img src="images/cart-item-4.png" alt="" />
+          <div class="content">
+            <h3>cart item 04</h3>
+            <div class="price">$14.39/-</div>
+          </div>
+        </div>
+        <a href="#" class="btn">checkout now</a>
+      </div>
+    </header>
 
-    <!-- Hero Section start -->
-    <section id="home" class="hero">
-      <div class="overlay"></div>
-      <main class="content">
-        <h1 class="title">
-          Delivering Indonesian
-          <span class="highlight">Premium Tea Products Across The Globe</span>
-        </h1>
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Delivering Indonesian Premium Tea Products Across The Globe</h3>
         <p>
-          "Quality as a sales and services that make it easier for customers to
-          qualify a product as well as possible."
+          Quality as a sales and services that make it easier for customers to
+          qualify a product as well as possible.
         </p>
-        <a href="https://youtube.com/xxxx" class="cta">Watch Video</a>
-      </main>
+        <a href="#" class="btn">Watch Video</a>
+      </div>
+      <div class="image-container">
+        <img src="./images/img.png" alt="Tea Products" class="animate-image" />
+      </div>
     </section>
 
-    <!-- Hero Section end -->
-    <section id="about" class="about">
-      <h2>World Best Quality of <span>Tea Product</span></h2>
+    <!-- home section ends -->
 
-      <div class="about-content">
-        <div class="about-item">
-          <div class="card" onclick="animateCard(this)">
-            <img src="./img/about/1.jpg" alt="Tea Image 1" class="card-img" />
-            <div class="card-content">
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+      <div id="company-adv">
+        <div id="company-adv-container">
+          <h1 class="heading">
+            <span>World Best Quality of </span> Tea Product
+          </h1>
+          <div class="row">
+            <div class="image">
+              <img
+                src="images/about-img.jpg"
+                alt="About Image"
+                class="clickable-image"
+              />
+            </div>
+
+            <div class="content">
               <p>
-                Wedana Tea International is a leading supplier of premium tea
+                1. Wedana Tea International is a leading supplier of premium tea
                 leaf products from Indonesia. We are an Indonesian company
                 dedicated to supplying high quality teas that have value or
                 benefit to our customers.
               </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-item">
-          <div class="card" onclick="animateCard(this)">
-            <img src="./img/about/2.jpg" alt="Tea Image 2" class="card-img" />
-            <div class="card-content">
               <p>
-                Our tea leaves are sourced from one of the largest tea producing
-                plantations in Indonesia, the second largest tea producing
-                region in the country, ensuring a sustainable supply of high
-                quality tea. We work closely with our local growers, customers,
-                and authorities to ensure mutually beneficial growth and success
-                for us.
+                2. Our tea leaves are sourced from one of the largest tea
+                producing plantations in Indonesia, the second largest tea
+                producing region in the country, ensuring a sustainable supply
+                of high quality tea. We work closely with our local growers,
+                customers and authorities to ensure mutually beneficial growth
+                and success for us.
               </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-item">
-          <div class="card" onclick="animateCard(this)">
-            <img src="./img/about/3.jpg" alt="Tea Image 3" class="card-img" />
-            <div class="card-content">
               <p>
-                Wedana Tea International is ready to support your business
+                3. Wedana Tea International is ready to support your business
                 success through consistent and quality supply. If you're looking
                 for a reliable supplier to increase your sales and support your
                 supply chain, we are the right choice to improve the quality and
@@ -117,159 +164,200 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Photo Gallery Section -->
-      <div class="photo-gallery">
-        <div class="photo-card" onclick="animatePhoto(this)">
-          <img src="./img/about/about3.jpg" alt="Tea Image 1" />
-        </div>
-        <div class="photo-card" onclick="animatePhoto(this)">
-          <img src="./img/about/about2.jpg" alt="Tea Image 2" />
-        </div>
-        <div class="photo-card" onclick="animatePhoto(this)">
-          <img src="./img/about/about1.jpg" alt="Tea Image 3" />
+          <!-- Photo Gallery Section -->
+          <div class="photo-gallery">
+            <div class="photo-card" onclick="animatePhoto(this)">
+              <img src="./images/about3.jpg" alt="Tea Image 1" />
+            </div>
+            <div class="photo-card" onclick="animatePhoto(this)">
+              <img src="./images/about2.jpg" alt="Tea Image 2" />
+            </div>
+            <div class="photo-card" onclick="animatePhoto(this)">
+              <img src="./images/about1.jpg" alt="Tea Image 3" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <main>
-      <section id="products" class="section">
-        <div class="container">
-          <div id="company-adv">
-            <div id="company-adv-container">
-              <h2>Our <span>Products</span></h2>
-              <p class="subtitle">
-                Ready to serve product: We provide superior tea products that
-                are conveniently and elegantly packaged, so you don't have to
-                worry about products that are well packaged and branded to be
-                ready for immediate marketing.
-              </p>
-              <div class="product-content">
-                <!-- Green Tea Card -->
-                <div class="product-card">
-                  <img
-                    src="./img/menu/greentea.png"
-                    alt="Green Tea"
-                    class="product-image"
-                  />
-                  <h3>Green Tea</h3>
-                  <p>
-                    Green tea, with the Latin name Camellia sinensis, is a
-                    popular beverage in Indonesia, Japan, and China. Green tea
-                    is a type of tea that has undergone minimal oxidation during
-                    processing. The shorter processing time results in a milder
-                    flavor profile and helps maintain the integrity of
-                    beneficial chemical compounds. Green tea is one of the most
-                    well-known types of tea. Green tea leaves do not undergo
-                    significant fermentation after picking, thus retaining their
-                    green color and antioxidant content.
-                  </p>
-                  <button
-                    class="learn-more"
-                    onclick="toggleDetails('green-tea-details')"
-                  >
-                    Learn More
-                  </button>
-                  <div id="green-tea-details" class="product-details">
-                    <h4>Green Tea and Its Nutritional Content</h4>
-                    <p>
-                      In 100 grams of green tea, there are almost no calories,
-                      but the following nutrients are present:
-                    </p>
-                    <ul>
-                      <li>300 kcal of energy</li>
-                      <li>0.2 grams of protein</li>
-                      <li>1 milligram of magnesium</li>
-                      <li>6 milligrams of potassium</li>
-                      <li>12 milligrams of caffeine</li>
-                    </ul>
-                    <p>
-                      In addition, green tea also contains vitamin B, vitamin C,
-                      and various active compounds that are antioxidant,
-                      anti-inflammatory, and anticancer.
-                    </p>
-                  </div>
-                </div>
+    <!-- about section ends -->
 
-                <!-- Black Tea Card -->
-                <div class="product-card">
-                  <img
-                    src="./img/menu/blacktea.png"
-                    alt="Black Tea"
-                    class="product-image"
-                  />
-                  <h3>Black Tea</h3>
-                  <p>
-                    The production of black tea involves a process called
-                    oxidation, which transforms the green leaves of Camellia
-                    sinensis into a brownish-black hue. The term "black tea" is
-                    derived from its dark color. Black tea undergoes complete
-                    fermentation after picking, giving it a distinctive flavor
-                    and a darker color than green tea.
-                  </p>
-                  <button
-                    class="learn-more"
-                    onclick="toggleDetails('black-tea-details')"
-                  >
-                    Learn More
-                  </button>
-                  <div id="black-tea-details" class="product-details">
-                    <h4>Black Tea Nutritional Content</h4>
-                    <ul>
-                      <li>Calories: 293</li>
-                      <li>Water: 8 g</li>
-                      <li>Protein: 24.5 grams</li>
-                      <li>Carbohydrates: 58.8 grams</li>
-                      <li>Fiber: 8.7 grams</li>
-                      <li>Calcium: 327 grams</li>
-                      <li>Phosphorus: 313 mg</li>
-                      <li>Potassium: 5854.8 mg</li>
-                      <li>Beta carotene: 2700 mcg</li>
-                      <li>Niacin (Vitamin B): 7.6 mg</li>
-                      <li>Vitamin C: 9 mg</li>
-                    </ul>
-                  </div>
-                </div>
+    >
+    <!-- products section starts -->
 
-                <!-- Jasmine Tea Card -->
-                <div class="product-card">
-                  <img
-                    src="./img/menu/jasminetea.png"
-                    alt="Jasmine Tea"
-                    class="product-image"
-                  />
-                  <h3>Jasmine Tea</h3>
-                  <p>
-                    Jasmine tea is a beverage produced by infusing green or
-                    black tea with jasmine flowers, resulting in an enhanced
-                    aromatic profile. Jasmine tea is a rich source of vitamins
-                    and antioxidants. This tea boasts a fragrant and refreshing
-                    aroma and flavor. Furthermore, jasmine tea is thought to
-                    confer a number of health benefits.
-                  </p>
-                  <button
-                    class="learn-more"
-                    onclick="toggleDetails('jasmine-tea-details')"
-                  >
-                    Learn More
-                  </button>
-                  <div id="jasmine-tea-details" class="product-details">
-                    <p>
-                      Jasmine tea is not only known for its delicious taste and
-                      captivating aroma but also for its numerous health
-                      benefits, such as boosting metabolism and providing
-                      antioxidants.
-                    </p>
-                  </div>
+    <section class="products" id="products">
+      <div id="company-adv">
+        <div id="company-adv-container">
+          <h1 class="heading">Our <span>Products</span></h1>
+
+          <div class="box-container">
+            <div class="box">
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a
+                  href="#"
+                  class="fas fa-eye"
+                  onclick="openModal('green-tea')"
+                ></a>
+              </div>
+              <div class="image">
+                <img src="images/product-3.jpg" alt="" />
+              </div>
+              <div class="content">
+                <h3>Green Tea</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
                 </div>
+                <div class="price">$10.99 <span>$11.99</span></div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a
+                  href="#"
+                  class="fas fa-eye"
+                  onclick="openModal('black-tea')"
+                ></a>
+              </div>
+              <div class="image">
+                <img src="images/product-2.jpg" alt="" />
+              </div>
+              <div class="content">
+                <h3>Black Tea</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$10.99 <span>$11.99</span></div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a
+                  href="#"
+                  class="fas fa-eye"
+                  onclick="openModal('jasmine-tea')"
+                ></a>
+              </div>
+              <div class="image">
+                <img src="images/product-1.jpg" alt="" />
+              </div>
+              <div class="content">
+                <h3>Jasmine Tea</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$10.99 <span>$11.99</span></div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+    <!-- produk section end -->
+
+    <!-- Product Details Modals -->
+    <div id="green-tea" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('green-tea')">&times;</span>
+        <h2>Green Tea</h2>
+        <p>
+          Green tea, with the Latin name Camellia sinensis, is a popular
+          beverage in Indonesia, Japan, and China. Green tea is a type of tea
+          that has undergone minimal oxidation during processing. The shorter
+          processing time results in a milder flavor profile and helps maintain
+          the integrity of beneficial chemical compounds.
+        </p>
+        <p>
+          Green tea is one of the most well-known types of tea. Green tea leaves
+          do not undergo significant fermentation after picking, thus retaining
+          their green color and antioxidant content.
+        </p>
+        <h3>Green Tea and Its Nutritional Content</h3>
+        <p>
+          In 100 grams of green tea, there are almost no calories, but the
+          following nutrients are present:
+        </p>
+        <ul>
+          <li>300 kcal of energy</li>
+          <li>0.2 grams of protein</li>
+          <li>1 milligram of magnesium</li>
+          <li>6 milligrams of potassium</li>
+          <li>12 milligrams of caffeine</li>
+        </ul>
+        <p>
+          In addition, green tea also contains vitamin B, vitamin C, and various
+          active compounds that are antioxidant, anti-inflammatory, and
+          anticancer. All of these nutrients in green tea are beneficial in
+          maintaining a healthy body.
+        </p>
+      </div>
+    </div>
+
+    <div id="black-tea" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('black-tea')">&times;</span>
+        <h2>Black Tea</h2>
+        <p>
+          The production of black tea involves a process called oxidation, which
+          transforms the green leaves of Camellia sinensis into a brownish-black
+          hue. The term "black tea" is derived from its dark color. Black tea
+          undergoes complete fermentation after picking, giving it a distinctive
+          flavor and a darker color than green tea.
+        </p>
+        <h3>Black Tea Nutritional Content</h3>
+        <p>
+          Here is the nutritional composition of black tea calculated per 100
+          grams:
+        </p>
+        <ul>
+          <li>Calories: 293</li>
+          <li>Water: 8 g</li>
+          <li>Protein: 24.5 grams</li>
+          <li>Carbohydrates: 58.8 grams</li>
+          <li>Fiber: 8.7 grams</li>
+          <li>Calcium: 327 grams</li>
+          <li>Phosphorus: 313 mg</li>
+          <li>Potassium: 5854.8 mg</li>
+          <li>Beta carotene: 2700 mcg</li>
+          <li>Niacin (Vitamin B): 7.6 mg</li>
+          <li>Vitamin C: 9 mg</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="jasmine-tea" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('jasmine-tea')">&times;</span>
+        <h2>Jasmine Tea</h2>
+        <p>
+          Jasmine tea is a beverage produced by infusing green or black tea with
+          jasmine flowers, resulting in an enhanced aromatic profile. Jasmine
+          tea is a rich source of vitamins and antioxidants. This tea boasts a
+          fragrant and refreshing aroma and flavor. Furthermore, jasmine tea is
+          thought to confer a number of health benefits.
+        </p>
+      </div>
+    </div>
+    <!-- shops section starts  -->
 
     <section id="gallery" class="gallery">
       <div id="company-adv">
@@ -278,7 +366,7 @@
 
           <div class="gallery-container">
             <div class="gallery-item">
-              <img src="./img/about/tealeaves.jpg" alt="Activity 1" />
+              <img src="./images/tealeaves.jpg" alt="Activity 1" />
               <div class="gallery-overlay">
                 <h3>Tea Tasting Events</h3>
                 <p>
@@ -288,7 +376,7 @@
               </div>
             </div>
             <div class="gallery-item">
-              <img src="./img/about/galery1.jpg" alt="Activity 2" />
+              <img src="./images/galery1.jpg" alt="Activity 2" />
               <div class="gallery-overlay">
                 <h3>Tea Production Tour</h3>
                 <p>
@@ -298,7 +386,7 @@
               </div>
             </div>
             <div class="gallery-item">
-              <img src="./img/about/galery2.jpg" alt="Product 1" />
+              <img src="./images/galery2.jpg" alt="Product 1" />
               <div class="gallery-overlay">
                 <h3>Premium Green Tea</h3>
                 <p>
@@ -308,7 +396,7 @@
               </div>
             </div>
             <div class="gallery-item">
-              <img src="./img/about/galery3.jpg" alt="Product 2" />
+              <img src="./images/galery3.jpg" alt="Product 2" />
               <div class="gallery-overlay">
                 <h3>Classic Black Tea</h3>
                 <p>
@@ -317,7 +405,7 @@
               </div>
             </div>
             <div class="gallery-item">
-              <img src="./img/about/galery4.jpg" alt="Activity 3" />
+              <img src="./images/galery4.jpg" alt="Activity 3" />
               <div class="gallery-overlay">
                 <h3>Tea Workshops</h3>
                 <p>
@@ -327,7 +415,7 @@
               </div>
             </div>
             <div class="gallery-item">
-              <img src="./img/about/galery5.jpg" alt="Product 3" />
+              <img src="./images/galery5.jpg" alt="Product 3" />
               <div class="gallery-overlay">
                 <h3>Herbal Infusions</h3>
                 <p>
@@ -341,14 +429,18 @@
         <div class="footer-info-col">
           <h2>Supported & <span>Certified</span></h2>
           <div class="footer-images">
-            <img src="./img/ministry.png" alt="Ministry" class="footer-image" />
             <img
-              src="./img/min2.png"
+              src="./images/ministry.png"
+              alt="Ministry"
+              class="footer-image"
+            />
+            <img
+              src="./images/min2.png"
               alt="Certification 2"
               class="footer-image"
             />
             <img
-              src="./img/min3.png"
+              src="./images/min3.png"
               alt="Certification 3"
               class="footer-image"
             />
@@ -357,117 +449,67 @@
       </div>
     </section>
 
-    <!-- Contact Section start -->
-    <section id="contact" class="contact">
-      <div id="company-adv">
-        <div id="company-adv-container">
-          <h2><span>Contact</span> Us</h2>
-          <div class="row">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.57311709235512!3d-6.903444341687889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1672408575523!5m2!1sen!2sid"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              class="map"
-            ></iframe>
+    <!-- shops section ends -->
+    <!-- contact section starts  -->
 
-            <form action="">
-              <div class="input-group">
-                <i data-feather="user"></i>
-                <input type="text" placeholder="Name" />
-              </div>
-              <div class="input-group">
-                <i data-feather="mail"></i>
-                <input type="text" placeholder="Email" />
-              </div>
-              <div class="input-group">
-                <i data-feather="phone"></i>
-                <input type="text" placeholder="No Hp" />
-              </div>
-              <div class="input-group">
-                <textarea placeholder="Message"></textarea>
-              </div>
-              <button type="submit" class="btn">Send Message</button>
-            </form>
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>contact</span> us</h1>
+
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0171037726013!2d109.12351827415497!3d-6.888554293110479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9c787089b59%3A0x4ce52f99eee48ea5!2sJl.%20Teuku%20Umar%20No.118%2C%20Debong%20Tengah%2C%20Kec.%20Tegal%20Sel.%2C%20Kota%20Tegal%2C%20Jawa%20Tengah%2052132!5e0!3m2!1sid!2sid!4v1722325964196!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+        <form action="">
+          <h3>get in touch</h3>
+          <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" placeholder="name" />
           </div>
-        </div>
+          <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="email" placeholder="email" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-phone"></span>
+            <input type="text" placeholder="number" />
+          </div>
+
+          <input type="submit" value="contact now" class="btn" />
+        </form>
       </div>
     </section>
-    <!-- Contact Section end -->
 
-    <footer class="footer">
-      <div class="footer-info">
-        <div class="container">
-          <div id="company-adv">
-            <div id="company-adv-container">
-              <div class="footer-info-row">
-                <div class="footer-info-col">
-                  <h3>INFORMATION</h3>
-                  <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#products">Product</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                  </ul>
-                </div>
+    <!-- contact section ends -->
 
-                <div class="footer-info-col">
-                  <h3>CONTACT US</h3>
-                  <p>Wedana Tea Indonesia</p>
-                  <p>JL. Raya Tegal - Pemalang Km 4, Kel. Padaharja,</p>
-                  <p>Kec. Kramat, Kab. Tegal, Prov. Jawa Tengah 52181</p>
-                  <p>
-                    <a href="mailto:cswedanatea24@gmail.com"
-                      >cswedanatea24@gmail.com</a
-                    >
-                    (0283) 311938 / 39
-                  </p>
-                  <p>Write to us: +62878-8893-9492</p>
-                  <div class="socials">
-                    <a href="#"><i data-feather="instagram"></i></a>
-                    <a href="#"><i data-feather="twitter"></i></a>
-                    <a href="#"><i data-feather="facebook"></i></a>
-                    <a href="#"><i data-feather="mail"></i></a>
-                  </div>
-                </div>
+    <!-- footer section starts  -->
 
-                <div class="footer-info-col">
-                  <h3>Suporrted & Certified</h3>
-                  <img
-                    src="./img/ministry.png"
-                    alt="Find Us"
-                    class="footer-image"
-                  />
-                  <img
-                    src="./img/min2.png"
-                    alt="Find Us"
-                    class="footer-image2"
-                  />
-                  <img
-                    src="./img/min3.png"
-                    alt="Find Us"
-                    class="footer-image3"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="footer">
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
       </div>
 
-      <div class="footer-copyright">
-        <p>&copy; 2024 Wedana Tea Indonesia. All Rights Reserved.</p>
+      <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">products</a>
+        <a href="#">contact</a>
       </div>
-    </footer>
 
-    <!-- Footer end -->
+      <div class="credit">
+        created by <span>Wedana Tea</span> | all rights reserved
+      </div>
+    </section>
 
-    <!-- Feather Icons -->
-    <script>
-      feather.replace();
-    </script>
+    <!-- footer section ends -->
 
-    <!-- My Javascript -->
+    <!-- custom js file link  -->
     <script src="js/script.js"></script>
   </body>
 </html>
