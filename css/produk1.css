@@ -561,12 +561,31 @@ section{
 }
 
 .footer {
-    background: #FBFFF9; /* Black background */
+    position: relative; /* Ensure pseudo-element is positioned correctly */
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.4), 
+            rgba(0, 0, 0, 0.4)
+        ), 
+        url('../images/header-bgg.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensure the image covers the footer */
+    color: #FFFFFF; /* Light text color for contrast */
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+    border-top: 4px solid #5BCD00; /* Green top border */
+    border-bottom: 4px solid #f39c12; /* Orange bottom border */
+    overflow: hidden;
+}
+
+.footer .share, .footer .links, .footer .info, .footer .credit {
+    position: relative;
+    z-index: 2; /* Ensure these elements sit above the overlay */
 }
 
 .footer .share {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     padding: 1rem 0;
 }
 
@@ -575,9 +594,9 @@ section{
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color: #000000; /* White color for icons */
+    color: #FFFFFF; /* White color for icons */
     border: 2px solid #5BCD00; /* Green border */
-    margin: .3rem;
+    margin: 0;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -585,51 +604,78 @@ section{
 
 .footer .share a:hover {
     background-color: #f39c12; /* Orange background on hover */
-    color: #000000; /* White color for icons on hover */
+    color: #000000; /* Black color for icons on hover */
 }
 
 .footer .links {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 2rem;
     padding: 2rem 0;
-    gap: 1rem;
 }
 
 .footer .links a {
     padding: .7rem 2rem;
-    color: #000000; /* White text color */
+    color: #FFFFFF; /* White text color */
     border: 2px solid #5BCD00; /* Green border */
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
 .footer .links a:hover {
     background: #f39c12; /* Orange background on hover */
+    color: #FFFFFF; /* White text color on hover */
 }
 
 .footer .info {
-    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
 }
 
 .footer .info p {
-    color: #000000; /* White text color */
-    font-size: 1.6rem;
+    color: #FFFFFF; /* White text color */
+    font-size: 1.5rem;
     margin: 0.5rem 0;
 }
 
 .footer .credit {
     font-size: 2rem;
-    color: #000000; /* White text color */
-    font-weight: lighter;
+    color: #FFFFFF; /* White text color */
+    font-weight: bold;
     padding: 1.5rem;
 }
 
 .footer .credit span {
     color: #f39c12; /* Orange color for the span */
+    
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer .share {
+        display: flex;
+        flex-direction: row; /* Ensure horizontal layout */
+        justify-content: center; /* Center the icons */
+        gap: 1rem;
+    }
+
+    .footer .links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem;
+    }
+
+    .footer .info {
+        flex-direction: column; /* Stack info items vertically */
+    }
+}
 
 /* media queries  */
 @media (max-width:991px){
