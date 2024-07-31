@@ -248,56 +248,111 @@ section{
     color:var(--main-color);
 }
 
-.header .cart-items-container .btn{
+.header .cart-items-container .btn {
     width: 100%;
     text-align: center;
+    color: #fff; /* Ubah warna teks menjadi putih untuk kontras */
+    background: linear-gradient(45deg, #6bd802, #397405); /* Gradien warna hijau */
+    border: none;
+    border-radius: 25px; /* Membuat sudut tombol melengkung */
+    padding: 1rem 2rem; /* Tambahkan padding untuk memperbesar tombol */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk efek 3D */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+    cursor: pointer; /* Menunjukkan bahwa ini bisa diklik */
 }
 
-.home{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background:url(../images/home-img.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+.header .cart-items-container .btn:hover {
+    background: linear-gradient(45deg, #397405, #6bd802); /* Ubah gradien warna saat hover */
+    transform: scale(1.05); /* Memperbesar sedikit tombol saat hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan saat hover */
 }
+
+.header .cart-items-container .btn:active {
+    transform: scale(0.95); /* Sedikit mengecilkan tombol saat diklik */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Mengurangi bayangan saat tombol aktif */
+}
+
 
 .home {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
+  background: url(../images/home-img.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay for better text contrast */
+  z-index: -1;
 }
 
 .home .content {
-  max-width: 60rem;
-  margin-right: 2rem; /* Geser konten ke kanan */
+  max-width: 50%;
+  color: #fff;
+  animation: fadeInLeft 1s ease forwards;
+  margin-left: 8rem; /* Geser konten ke kanan */
+  margin-top: 4rem; /* Tambahkan margin atas agar tidak mepet dengan navbar */
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .home .content h3 {
   font-size: 4rem;
   text-transform: uppercase;
-  color: #ffffff; /* Warna teks utama */
-  text-shadow: 
-    2px 2px 0 #397405,  /* Bayangan teks hitam (kiri bawah) */
-    -2px -2px 0 #397405, /* Bayangan teks hitam (kanan atas) */
-    2px -2px 0 #397405,  /* Bayangan teks hitam (kanan bawah) */
-    -2px 2px 0 #397405;  /* Bayangan teks hitam (kiri atas) */
-  margin-left: 5rem; /* Geser h3 ke kanan */
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #397405, -2px -2px 0 #397405, 2px -2px 0 #397405, -2px 2px 0 #397405;
+  margin-bottom: 2rem;
+  animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 2px 2px 10px #397405;
+  }
+  100% {
+    text-shadow: 2px 2px 20px #6bd802;
+  }
 }
 
 .home .content p {
-  font-size: 2rem;
-  line-height: 1.5;
-  padding: 1rem 0;
-  color: #000000; /* Warna teks utama */
-  margin-left: 5rem; /* Geser paragraf ke kanan */
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 
 .home .content .btn {
-  margin-left: 5rem; /* Geser tombol ke kanan */
+  display: inline-block;
+  padding: 1rem 2rem;
   background-color: #397405;
-  border-radius: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home .content .btn:hover {
+  background-color: #2c5d04;
+  transform: scale(1.05);
 }
 
 .home .image-container {
@@ -305,23 +360,36 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8rem; /* Geser gambar ke kiri */
+  animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .home .image-container img {
   width: 100%;
   height: auto;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
   cursor: pointer;
-  transition: transform 0.3s ease; /* Animation effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .home .image-container img:hover {
-  transform: scale(1.1); /* Scale up on hover */
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Animation on click */
 .home .image-container img:active {
-  animation: rotateImage 0.5s ease forwards; /* Custom animation */
+  animation: rotateImage 0.5s ease forwards;
 }
 
 @keyframes rotateImage {
@@ -333,34 +401,54 @@ section{
   }
 }
 
+/* Particle Animation */
+.home::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 10px 10px;
+  z-index: -1;
+  animation: moveParticles 20s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes moveParticles {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem; /* Kurangi padding di samping pada tampilan mobile */
   }
 
-  .home .content, .home .image-container {
+  .home .content {
     max-width: 100%;
-    text-align: center;
-    margin: 0; /* Reset margin on smaller screens */
+    margin: 2rem 0; /* Sesuaikan margin atas dan bawah */
+    margin-top: 10rem; /* Tambahkan margin atas agar tidak mepet dengan navbar */
+  }
+
+  .home .image-container {
+    max-width: 100%;
   }
 
   .home .content h3 {
     font-size: 3rem;
-    margin-top: 8rem;
   }
 
   .home .content p {
-    font-size: 1.5rem;
-    margin-left: 0; /* Reset margin on smaller screens */
-  }
-
-  .home .content .btn {
-    margin-left: 0; /* Reset margin on smaller screens */
-  }
-
-  .home .image-container {
-    margin-left: 0; /* Reset margin on smaller screens */
+    font-size: 1.2rem;
   }
 }
 
