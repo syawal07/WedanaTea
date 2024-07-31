@@ -56,3 +56,17 @@ window.onclick = function (event) {
     }
   });
 };
+
+function openModal(productId) {
+  document.getElementById(productId).style.display = "block";
+}
+
+function closeModal(productId) {
+  document.getElementById(productId).style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target.classList.contains("modal")) {
+    event.target.style.display = "none";
+  }
+};

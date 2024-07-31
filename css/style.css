@@ -252,7 +252,7 @@ section{
     width: 100%;
     text-align: center;
     color: #fff; /* Ubah warna teks menjadi putih untuk kontras */
-    background: linear-gradient(45deg, #6bd802, #397405); /* Gradien warna hijau */
+    background: linear-gradient(45deg, #5BCD00, #397405); /* Gradien warna hijau */
     border: none;
     border-radius: 25px; /* Membuat sudut tombol melengkung */
     padding: 1rem 2rem; /* Tambahkan padding untuk memperbesar tombol */
@@ -262,7 +262,7 @@ section{
 }
 
 .header .cart-items-container .btn:hover {
-    background: linear-gradient(45deg, #397405, #6bd802); /* Ubah gradien warna saat hover */
+    background: linear-gradient(45deg, #397405, #5BCD00); /* Ubah gradien warna saat hover */
     transform: scale(1.05); /* Memperbesar sedikit tombol saat hover */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan saat hover */
 }
@@ -322,17 +322,10 @@ section{
   color: #ffffff;
   text-shadow: 2px 2px 0 #397405, -2px -2px 0 #397405, 2px -2px 0 #397405, -2px 2px 0 #397405;
   margin-bottom: 2rem;
-  animation: textGlow 1.5s ease-in-out infinite alternate;
+
 }
 
-@keyframes textGlow {
-  0% {
-    text-shadow: 2px 2px 10px #397405;
-  }
-  100% {
-    text-shadow: 2px 2px 20px #6bd802;
-  }
-}
+
 
 .home .content p {
   font-size: 1.5rem;
@@ -343,7 +336,7 @@ section{
 .home .content .btn {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #397405;
+  background-color: #5BCD00;
   color: #fff;
   text-transform: uppercase;
   border-radius: 25px;
@@ -903,15 +896,6 @@ section{
   background-color: #f5f5f5; /* Latar belakang terang untuk kontras */
 }
 
-.gallery h2 {
-  text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 4rem;
-}
-
-.gallery h2 span {
-  color: var(--primary);
-}
 
 .gallery-container {
   display: flex;
