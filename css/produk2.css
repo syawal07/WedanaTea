@@ -284,8 +284,9 @@ section{
 
 /* Raw Material Products Styles */
 #raw-material-products {
-   padding: 100px;
+  padding: 100px 20px; /* Adjusted padding for better spacing */
   background-image: url("../images/advantages-leaves-left.png");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -304,6 +305,8 @@ section{
   color: #397405;
   text-align: center;
   margin-bottom: 1rem;
+  text-transform: uppercase; /* Added uppercase for a bold header */
+  letter-spacing: 2px; /* Added letter spacing for a refined look */
 }
 
 #raw-material-products-container h2 span {
@@ -315,15 +318,19 @@ section{
   color: #333;
   text-align: center;
   margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; /* Center the subtitle with automatic margins */
 }
 
+/* Raw Material Content Styling */
 .raw-material-content {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-/* Adjusted Raw Material Card Styles */
+/* Raw Material Card Styles */
 .raw-material-card {
   display: flex;
   flex-direction: row;
@@ -332,6 +339,7 @@ section{
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   overflow: hidden;
+  background: #fff;
 }
 
 .raw-material-card:hover {
@@ -341,7 +349,7 @@ section{
 
 .raw-material-image {
   flex: 1;
-  max-width: 40%; /* Reduce image width */
+  max-width: 40%;
   padding: 1rem;
 }
 
@@ -350,11 +358,16 @@ section{
   height: auto;
   object-fit: cover;
   border-radius: 15px;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.raw-material-card:hover .raw-material-img {
+  transform: scale(1.05); /* Slight zoom on hover for eye-catching effect */
 }
 
 .raw-material-info {
   flex: 2;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: justify;
 }
 
@@ -362,10 +375,23 @@ section{
   font-size: 2.5rem;
   color: #397405;
   margin-bottom: 1rem;
+  font-weight: 600; /* Lighter font weight for a refined look */
+  transition: color 0.3s ease; /* Smooth transition on hover */
 }
 
 .raw-material-info h3 span {
   color: var(--primary);
+}
+
+.raw-material-info p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.raw-material-info p:hover {
+  color: #397405; /* Change text color on hover for an interactive effect */
 }
 
 .advantage {
@@ -381,7 +407,7 @@ section{
 
 .advantage p {
   font-size: 1.2rem;
-  color: #555;
+  color: #000000;
   line-height: 1.6;
 }
 
@@ -398,7 +424,7 @@ section{
   }
 
   .raw-material-image {
-    max-width: 100%; /* Ensure image fits container */
+    max-width: 100%;
     padding: 0;
   }
 
@@ -408,19 +434,43 @@ section{
 }
 
 #company-adv {
-    position: relative;
-    overflow: hidden;
-    background-image: url("../img/advantages-leaves-left.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../img/advantages-leaves-left.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #company-adv-container {
-    max-width: 1200px;
-    background-image: url("../img/adv-floating-leaves-right.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  max-width: 1200px;
+  background-image: url("../img/adv-floating-leaves-right.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 50px 20px;
+}
+
+/* Additional Styles for Elegance and Interaction */
+.raw-material-card:hover .raw-material-info h3 {
+  color: var(--primary); /* Change color on hover for headers */
+}
+
+.raw-material-info a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.raw-material-info a:hover {
+  color: #397405;
+  text-decoration: underline;
+}
+
+.raw-material-info p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #397405; /* Stylize the first letter for a unique touch */
 }
 
 

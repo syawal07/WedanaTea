@@ -291,12 +291,13 @@ section{
 
 /* General styling for the About Us section */
 .about-intro {
-   padding: 100px;
+  padding: 80px 20px;
   background-image: url("../images/advantages-leaves-left.png");
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
 }
 
 .about-intro::before {
@@ -312,33 +313,43 @@ section{
 }
 
 .main-title {
-  font-size: 4.5rem; /* Increased font size for a more striking effect */
+  font-size: 4.5rem;
   color: #5BCD00;
   margin-bottom: 1.5rem;
-  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Enhanced text shadow */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
   position: relative;
   z-index: 1;
+  text-align: center;
+  font-weight: 600; /* Reduced font weight for a lighter appearance */
 }
 
 .subtitle {
-  font-size: 1.8rem; /* Increased font size for better readability */
-  color: #000000;
-  max-width: 900px; /* Increased max-width for more spacious look */
+  font-size: 1.8rem;
+  color: #333333; /* Darker grey color for a softer look */
+  max-width: 900px;
   margin: 0 auto;
   line-height: 1.8;
   text-align: justify;
   position: relative;
   z-index: 1;
   background: #ffffff;
-  padding: 2rem 2.5rem; /* Adjusted padding for a more spacious feel */
-  border-radius: 12px; /* Increased border-radius for a softer look */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Enhanced box-shadow */
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softened box shadow */
+  font-weight: 400; /* Reduced font weight for a lighter appearance */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for subtitle */
+.subtitle:hover {
+  transform: translateY(-5px); /* Slight lift on hover for eye-catching effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* Responsive styles for tablet */
 @media (max-width: 758px) {
   .main-title {
-    font-size: 3rem; /* Adjusted font size for smaller screens */
+    font-size: 3rem;
   }
 
   .subtitle {
@@ -346,6 +357,25 @@ section{
     padding: 1.5rem;
   }
 }
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+  .about-intro {
+    padding: 60px 15px;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+    padding: 1.5rem 1rem;
+    line-height: 1.5;
+  }
+}
+
 
 /* Styling for the "Why Us?" section */
 .why-us {
