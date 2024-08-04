@@ -839,6 +839,7 @@ section{
     margin-bottom: 2rem;
     background:var(--bg);
     border:var(--border);
+    border-radius: 12px;
 }
 
 .contact .row form .inputBox span{
@@ -856,6 +857,22 @@ section{
     background:none;
 }
 
+.contact .row form .btn {
+    background: #5BCD00; /* Accent color background */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 1rem 2.5rem; /* Increase padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.4rem; /* Larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.contact .row form .btn:hover {
+    background: #4a9a00; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
 .shops .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
