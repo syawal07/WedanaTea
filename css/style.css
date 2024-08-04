@@ -62,16 +62,25 @@ section{
 
 
 .heading{
-    text-align: center;
-    color:#f39c12;
-    text-transform: uppercase;
-    padding-bottom: 3.5rem;
-    font-size: 3rem;
+  font-size: 3rem;
+  color: #5BCD00;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-weight: 600; /* Reduced font weight for a lighter appearance */
 }
 
 .heading span{
-    color:#5BCD00;
-    text-transform: uppercase;
+    font-size: 3rem;
+  color: #e0b400;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-weight: 600; /* Reduced font weight for a lighter appearance */
 }
 
 .btn{
@@ -88,22 +97,30 @@ section{
     letter-spacing: .2rem;
 }
 
-.header{
+.header {
     background: var(--bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:1.5rem 7%;
+    padding: 1.5rem 7%;
     border-bottom: var(--border);
     position: fixed;
-    top:0; left: 0; right: 0;
+    top: 0; left: 0; right: 0;
     z-index: 1000;
     font-weight: 500;
 }
 
-.header .logo img{
-    height: 6rem;
+.header .logo img {
+    height: 8rem; /* Increased height for the logo */
+    transition: height 0.3s ease, transform 0.3s ease; /* Smooth transition for size and effect */
 }
+
+/* Optional: Add hover effect for logo */
+.header .logo img:hover {
+    height: 9rem; /* Increase size on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
 
 .header .navbar a{
     margin:0 1rem;
@@ -319,17 +336,29 @@ section{
 .home .content h3 {
   font-size: 4rem;
   text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 2px 2px 0 #397405, -2px -2px 0 #397405, 2px -2px 0 #397405, -2px 2px 0 #397405;
+  background: linear-gradient(90deg, #e0e7da, #77ff00);
+  -webkit-background-clip: text; /* For WebKit-based browsers (Chrome, Safari) */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* For WebKit-based browsers */
+  color: transparent; /* Standard property */
   margin-bottom: 2rem;
-
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
 
 
 
+
 .home .content p {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increased font size */
+  color: #ffffff;
   line-height: 1.8;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
   margin-bottom: 2rem;
 }
 
@@ -452,10 +481,14 @@ section{
 }
 
 .about .heading {
-    text-align: center;
-    font-size: 3rem;
-    color: #5BCD00;;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #5BCD00;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-weight: 600; /* Reduced font weight for a lighter appearance */
 }
 
 .about .heading span {
@@ -479,8 +512,44 @@ section{
 .about .row .image img {
     width: 100%;
     margin-top: -13rem;
-    border-radius: 10px 0 0 10px; /* Add border radius to left side */
+    border-radius: 10px 0 0 10px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth, natural animation curve */
+    cursor: pointer;
 }
+
+.about .row .image img:hover {
+    transform: scale(1.05) rotate(2deg); /* Slight scale and rotation on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about .row .image img:active {
+    animation: bounceIn 0.6s ease forwards; /* Smooth bounce effect on click */
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(1) rotate(0);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    30% {
+        transform: scale(1.1) rotate(2deg);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(0.9) rotate(-2deg);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    70% {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
 
 .about .row .content {
     flex: 1 1 45rem;
@@ -497,12 +566,12 @@ section{
 }
 
 .about .row .content p {
-    font-size: 1.3rem;
-    color: #000000; /* Darker color for paragraph text */
-    padding: 1rem 0;
-    line-height: 1.8;
-    margin-top: -1rem;
-    text-align: justify;
+ font-size: 1.5rem; /* Increased font size */
+  color: #000000;
+  line-height: 1.6;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
 }
 
 

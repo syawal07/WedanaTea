@@ -320,10 +320,11 @@ section{
 
 /* Logo inside the card */
 .card .logo {
-  width: 150px; /* Adjust as needed */
+  width: 300px; /* Ukuran logo diperbesar */
   height: auto;
   margin-right: 20px;
-  transition: transform 0.3s ease; /* Smooth transition for scale effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus */
+  cursor: pointer; /* Pointer untuk interaksi */
 }
 
 /* Keyframes for pop-up animation */
@@ -345,6 +346,7 @@ section{
 /* Active class for pop-up effect */
 .card .logo.active {
   animation: pop-up 0.6s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tambahkan shadow saat animasi */
 }
 
 /* Content inside the card */
@@ -352,9 +354,16 @@ section{
   flex: 1;
 }
 
+/* Optional: hover effect to add interactivity */
+.card .logo:hover {
+  transform: scale(1.05); /* Zoom saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Tambah bayangan saat hover */
+}
+
+
 /* Main title */
 .main-title {
-  font-size: 4.5rem;
+  font-size: 3rem;
   color: #5BCD00;
   margin-bottom: 1.5rem;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
@@ -362,6 +371,9 @@ section{
   z-index: 1;
   text-align: center;
   font-weight: 600; /* Reduced font weight for a lighter appearance */
+}
+.main-title span{
+  color: #f0c400;
 }
 
 /* Subtitle */
@@ -422,7 +434,7 @@ section{
   }
 
   .subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 1.5rem 1rem;
     line-height: 1.5;
   }
@@ -433,7 +445,7 @@ section{
   }
 
   .card .logo {
-    width: 120px; /* Adjust size for smaller screens */
+    width: 200px; /* Adjust size for smaller screens */
     margin-right: 0;
     margin-bottom: 20px;
   }
@@ -471,17 +483,19 @@ section{
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .why-us .subtitle {
   font-size: 2.2rem; /* Increased font size */
-  color: #333;
+  color: #000000;
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+    text-align: center;
 }
 
 /* Reason section styling */
@@ -527,7 +541,7 @@ section{
 
 .reason-text h4 {
   font-size: 2rem; /* Increased font size */
-  color: #5BCD00;
+  color: #f0c400;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 1;
@@ -536,9 +550,22 @@ section{
   font-weight: bold;
 }
 
+/* Span di dalam h4 */
+.reason-text h4 span {
+  font-size: 2.2rem; /* Ukuran font sedikit lebih besar */
+  color: #ffffff; /* Teks putih */
+  background: #5BCD00; /* Latar belakang hijau */
+  padding: 0.2rem 0.5rem; /* Padding di sekitar teks */
+  border-radius: 5px; /* Sudut melengkung */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+  position: relative;
+  z-index: 2; /* Pastikan di atas h4 */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transisi halus */
+}
+
 .reason-text p {
   font-size: 1.6rem; /* Increased font size */
-  color: #555;
+  color: #000000;
   line-height: 1.6;
   text-align: justify;
   position: relative;
@@ -570,6 +597,10 @@ section{
 
   .reason-text h4 {
     font-size: 1.6rem;
+  }
+
+  .reason-text h4 span {
+     font-size: 1.5rem;
   }
 
   .reason-text p {

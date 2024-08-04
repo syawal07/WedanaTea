@@ -333,9 +333,21 @@ section{
 }
 
 .product-info h2 {
-  font-size: 1.6em; /* Slightly larger font size */
-  color: #000000;
+  font-size: 2em; /* Slightly larger font size */
+  color: #5BCD00;
   margin-bottom: 10px;
+}
+
+.product-info h2 span {
+   font-size: 2.2rem; /* Ukuran font sedikit lebih besar */
+  color: #ffffff; /* Teks putih */
+  background: #f0c400; /* Latar belakang hijau */
+  padding: 0.2rem 0.5rem; /* Padding di sekitar teks */
+  border-radius: 5px; /* Sudut melengkung */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+  position: relative;
+  z-index: 2; /* Pastikan di atas h4 */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transisi halus */
 }
 
 .product-info p {
