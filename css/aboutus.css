@@ -270,21 +270,7 @@ section{
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Mengurangi bayangan saat tombol aktif */
 }
 
-#company-adv {
-    position: relative;
-    overflow: hidden;
-    background-image: url("../images/advantages-leaves-left.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
-#company-adv-container {
-    max-width: 1200px;
-    background-image: url("../images/adv-floating-leaves-right.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
 
 
 
@@ -454,6 +440,9 @@ section{
 /* Styling for the "Why Us?" section */
 .why-us {
   background: #ffffff;
+  background-image: url('../images/ptw.png'); /* Add your background image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the background image */
   padding: 4rem 2rem; /* Increased padding for a more spacious feel */
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -465,15 +454,15 @@ section{
 .why-us::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: -20%;
-  width: 140%;
-  height: 200%;
-  background: rgba(0, 0, 0, 0.05);
-  transform: rotate(-20deg);
+  top: 0; /* Adjust to cover entire section */
+  left: 0; /* Adjust to cover entire section */
+  width: 100%; /* Adjust to cover entire section */
+  height: 100%; /* Adjust to cover entire section */
+  background: rgba(0, 0, 0, 0.2); /* Reduced transparency for a darker overlay */
   z-index: 0;
   pointer-events: none;
 }
+
 
 .why-us .title {
   font-size: 3rem; /* Increased font size */

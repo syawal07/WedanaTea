@@ -474,386 +474,499 @@ section{
 }
 
 
+/* General Styling */
 .about {
-    padding: 5rem 10%;
-    background: #FBFFF9; /* Background color for the about section */
+  padding: 80px 10%;
+  background-color: #FBFFF9;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .about .heading {
   font-size: 3rem;
   color: #5BCD00;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
-  position: relative;
-  z-index: 1;
+  margin-bottom: 2rem;
   text-align: center;
-  font-weight: 600; /* Reduced font weight for a lighter appearance */
+  font-weight: 700;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about .heading span {
-    color: #f0c400;
+  color: #f0c400;
 }
 
-.about .row {
-    display: flex;
-    align-items: center;
-    background: var(--black);
-    flex-wrap: wrap;
-    border-radius: 10px;
-    overflow: hidden; /* Ensure the border radius applies to all elements within */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Add shadow for better effect */
-}
-
-.about .row .image {
-    flex: 1 1 45rem;
-}
-
-.about .row .image img {
-    width: 100%;
-    margin-top: -13rem;
-    border-radius: 10px 0 0 10px;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth, natural animation curve */
-    cursor: pointer;
-}
-
-.about .row .image img:hover {
-    transform: scale(1.05) rotate(2deg); /* Slight scale and rotation on hover */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.about .row .image img:active {
-    animation: bounceIn 0.6s ease forwards; /* Smooth bounce effect on click */
-}
-
-@keyframes bounceIn {
-    0% {
-        transform: scale(1) rotate(0);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    30% {
-        transform: scale(1.1) rotate(2deg);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-    50% {
-        transform: scale(0.9) rotate(-2deg);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-    70% {
-        transform: scale(1.05) rotate(1deg);
-        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
-    }
-    100% {
-        transform: scale(1) rotate(0);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-}
-
-
-.about .row .content {
-    flex: 1 1 45rem;
-    padding: 2rem;
-    background: #fff; /* White background for better text readability */
-    border-radius: 0 10px 10px 0; /* Add border radius to right side */
-    color: #333; /* Dark text color */
-}
-
-.about .row .content h3 {
-    font-size: 3rem;
-    color: #f0c400;
-    margin-bottom: 1rem;
-}
-
-.about .row .content p {
- font-size: 1.5rem; /* Increased font size */
-  color: #000000;
-  line-height: 1.6;
-  text-align: justify;
-  position: relative;
-  z-index: 1;
-}
-
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about .row {
-        flex-direction: column;
-    }
-
-    .about .row .image, .about .row .content {
-        flex: 1 1 100%;
-    }
-
-    .about .row .image img {
-        border-radius: 10px 10px 0 0; /* Add border radius to top side */
-    }
-
-    .about .row .content {
-        border-radius: 0 0 10px 10px; /* Add border radius to bottom side */
-    }
-
-    .about .heading {
-        font-size: 2.5rem;
-    }
-
-    .about .row .content h3 {
-        font-size: 2.5rem;
-    }
-
-    .about .row .content p {
-        font-size: 1.4rem;
-    }
-
-    .about .row .content .btn {
-        font-size: 1.4rem;
-    }
-}
-
-.photo-gallery {
+/* Card Styling */
+.card {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 4rem;
-  flex-wrap: wrap;
-}
-
-.photo-card {
-  width: 28%;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 15px;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #77ff00;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.photo-card img {
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+}
+
+.icon-1-card .card-icon {
+  background-image: url('../images/supplier.png');
+}
+
+.icon-2-card .card-icon {
+  background-image: url('../images/field.png');
+}
+
+.icon-3-card .card-icon {
+  background-image: url('../images/cooperation.png');
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content p {
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Photo Gallery Section */
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.photo-card {
   width: 100%;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-.photo-card:active img {
-  transform: scale(0.95);
+.photo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Media Queries untuk Desain Responsif */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .about-item {
-    flex-direction: column;
+  .about {
+    padding: 60px 5%;
+  }
+
+  .about .heading {
+    font-size: 2.5rem;
   }
 
   .card {
-    width: 100%;
-    max-width: none; /* Hapus lebar maksimum untuk layar kecil */
+    flex-direction: column;
+    align-items: center; /* Center-align cards on mobile */
+    padding: 15px;
+    text-align: center;
   }
 
-  .photo-card {
-    width: 80%;
-    margin: 1rem auto; /* Mengatur margin atas/bawah dan auto untuk margin kiri/kanan agar berada di tengah */
+  .card-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
   }
 
   .photo-gallery {
-    flex-direction: column; /* Mengubah tata letak galeri menjadi vertikal pada perangkat kecil */
-  }
-
-  .about .row {
     flex-direction: column;
     align-items: center;
   }
+
+  .photo-card {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
 }
 
 
-.products .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+/* General Styling */
+.product-section {
+  padding: 80px;
+  background-image: url("../images/advantages-leaves-left.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.products .box-container .box {
-    text-align: center;
-    border: var(--border);
-    padding: 2rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+.product-section p {
+  font-size: 1.4rem;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
 }
 
-.products .box-container .box .icons a {
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    border: var(--border);
-    color: #e0b400;
-    margin: .3rem;
-    display: inline-block;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Product Styling */
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border: 1px solid #77ff00;
+  border-radius: 12px;
+  background-color: #FBFFF9;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.products .box-container .box .icons a:hover {
-    background: var(--main-color);
-    color: #5BCD00;
+.product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
-.products .box-container .box .image {
-    padding: 2.5rem 0;
+.product-image {
+  flex: 1 1 30%;
+  position: relative;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  overflow: hidden;
 }
 
-.products .box-container .box .image img {
-    height: 25rem;
-    width: auto;
-    object-fit: contain;
-}
-
-.products .box-container .box .content h3 {
-    color: #333;
-    font-size: 2.5rem;
-}
-
-.products .box-container .box .content .stars {
-    padding: 1.5rem 0;
-}
-
-.products .box-container .box .content .stars i {
-    font-size: 1.7rem;
-    color: #e0b400;
-}
-
-.products .box-container .box .content .price {
-    color: #333;
-    font-size: 2.5rem;
-}
-
-.products .box-container .box .content .price span {
-    text-decoration: line-through;
-    font-weight: lighter;
-    font-size: 1.5rem;
-    color: #888;
-}
-
-.products .box-container .box .image img {
-    height: 25rem;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Zoom-in effect on hover */
-.products .box-container .box .image img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-
-/* Modal Styles */
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
+.product-image img {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-    /* Disable scrolling on the background */
-    overflow: hidden; /* Prevent scrollbars from appearing */
+  height: 300px; /* Adjust this value as needed for the height */
+  object-fit: cover; /* Ensures the image covers the area while cropping excess */
+  border-radius: 8px; /* Optional: Rounded corners for images inside modal */
+  display: block; /* Ensure the image takes up the full width of its container */
+  margin-bottom: 20px; /* Space between the image and text */
+  transition: transform 0.3s ease;
 }
 
-/* Modal Content Styles */
+.product-image:hover img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  flex: 1 1 70%;
+  padding: 20px;
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  color: #5BCD00;
+  margin-bottom: 10px;
+}
+
+.product-info h2 span {
+  font-size: 2.2rem;
+  color: #ffffff;
+  background: #f0c400;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.product-info p {
+   font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    animation: fadeIn 0.5s;
-    position: relative; /* Ensure modal content is positioned properly */
+  background-color: #FBFFF9;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  width: 50%;
+  max-width: 800px;
 }
-
+.modal-content img {
+  width: 100%;
+  height: 300px; /* Adjust this value as needed for the height */
+  object-fit: cover; /* Ensures the image covers the area while cropping excess */
+  border-radius: 8px; /* Optional: Rounded corners for images inside modal */
+  display: block; /* Ensure the image takes up the full width of its container */
+  margin-bottom: 20px; /* Space between the image and text */
+}
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #000000;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+/* Styling the list inside the modal */
+.modal-content ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove default padding */
+  margin: 20px 0; /* Add some margin for spacing */
+  line-height: 1.8; /* Increase line height for readability */
+  transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.modal-content li {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 5px; /* Add spacing between list items */
+  position: relative;
+  padding-left: 25px; /* Add padding for custom bullet */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+.modal-content li::before {
+  content: "\2022"; /* Custom bullet point */
+  position: absolute;
+  left: 0;
+  color: #000000; /* Custom bullet color */
+  font-size: 1.2rem; /* Size of bullet */
+  top: 0;
+}
+
+.modal-content li:hover {
+  transform: translateX(10px); /* Slightly move the list item on hover */
+  color: #5BCD00; /* Change text color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .product-section {
+    padding: 50px;
+  }
+
+  .product {
+    flex-direction: column;
+  }
+
+  .product-image {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+
+  .product-info h2 {
+    font-size: 1.7rem;
+  }
+
+  .product-info p {
+    font-size: 1.1rem;
+  }
+
+  .product-section p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-section {
+    padding: 30px;
+    margin-top: 8rem;
+  }
+
+  .product-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .product-info p {
+    font-size: 1.1rem;
+  }
+
+  .product-section p {
+    font-size: 1.2rem;
+  }
+}
+
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.action-icon {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.action-icon:hover {
+  color: #5BCD00;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .product-actions {
+    top: 5px;
+    right: 5px;
+  }
+
+  .action-icon {
+    font-size: 1.5rem;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-icon {
+    font-size: 1.5rem;
+    margin: 4px 0;
+  }
+}
+
+.icon-text {
+  font-size: 1.5rem;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 8rem; /* Add space for the icon */
+}
+
+.icon-text .icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rem; /* Adjust icon size */
+  height: 6rem; /* Adjust icon size */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.icon-professional {
+  background-image: url('../images/handshake.png'); /* Path to your professional icon */
+}
+
+.icon-availability {
+  background-image: url('../images/communicate.png'); /* Path to your availability icon */
 }
 
 
-.contact .row{
+.contact .row {
     display: flex;
-    background:var(--black);
+    background: var(--black);
     flex-wrap: wrap;
-    gap:1rem;
+    gap: 1rem;
+    padding: 1rem; /* Add padding to ensure content isn't flush with the edges */
 }
 
-.contact .row .map{
-    flex:1 1 45rem;
+.contact .row .map {
+    flex: 1 1 45rem;
     width: 100%;
     object-fit: cover;
+    border-radius: 12px; /* Rounded corners for the map */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for better separation */
 }
 
-.contact .row form{
-    flex:1 1 45rem;
-    padding:5rem 2rem;
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
     text-align: center;
+    background: var(--bg); /* Background color for the form */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.contact .row form h3{
+.contact .row form h3 {
     text-transform: uppercase;
     font-size: 3.5rem;
-    color:#000000;
+    color: #000000;
+    margin-bottom: 2rem; /* Space below the header */
 }
 
-.contact .row form .inputBox{
+.contact .row form .inputBox {
     display: flex;
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background:var(--bg);
-    border:var(--border);
+    background: var(--bg); /* Ensure consistent background */
+    border: var(--border);
     border-radius: 12px;
+    padding: 0 1rem; /* Padding inside the input box */
 }
 
-.contact .row form .inputBox span{
-    color:#000000;
-    font-size: 2rem;
+.contact .row form .inputBox span {
+    color: #141313;
+    font-size: 1.5rem;
     padding-left: 2rem;
 }
 
-.contact .row form .inputBox input{
+.contact .row form .inputBox input {
     width: 100%;
-    padding:2rem;
-    font-size: 1.7rem;
-    color:#000000;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #000000;
     text-transform: none;
-    background:none;
+    background: none;
+    border: none; /* Remove border to maintain styling */
+    border-radius: 12px; /* Rounded corners */
+}
+
+.contact .row form textarea {
+    width: 100%;
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: #000000;
+    background: var(--bg);
+    border-radius: 12px;
+    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .contact .row form .btn {
@@ -870,8 +983,32 @@ section{
 .contact .row form .btn:hover {
     background: #4a9a00; /* Darker shade on hover */
     transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact .row {
+        flex-direction: column;
+        gap: 2rem; /* Increase gap for smaller screens */
+    }
+
+    .contact .row .map,
+    .contact .row form {
+        flex: 1 1 auto; /* Allow flex items to adjust to content */
+        width: 100%;
+    }
+
+    .contact .row form {
+        padding: 3rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    /* Add top margin to the contact section */
+    .contact {
+        margin-top: 5rem; /* Adjust this value based on your navbar height */
+    }
+}
+
 .shops .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

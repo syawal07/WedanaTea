@@ -70,3 +70,8 @@ window.onclick = function (event) {
     event.target.style.display = "none";
   }
 };
+
+window.onload = function () {
+  // Reset the form fields when the page loads
+  document.getElementById("form").reset();
+};

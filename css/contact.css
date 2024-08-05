@@ -297,134 +297,149 @@ section{
 
 
 /* Contact Section */
+.icon-text {
+  font-size: 1.5rem;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 8rem; /* Add space for the icon */
+}
+
+.icon-text .icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rem; /* Adjust icon size */
+  height: 6rem; /* Adjust icon size */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.icon-professional {
+  background-image: url('../images/handshake.png'); /* Path to your professional icon */
+}
+
+.icon-availability {
+  background-image: url('../images/communicate.png'); /* Path to your availability icon */
+}
+
 .contact {
-    background: #f9f9f9; /* Soft background color */
-    padding: 6rem 2rem; /* Increase spacing around the section */
-    text-align: center; /* Center text alignment */
-    margin-top: 80px; /* Space below the navbar */
-    border-top: 5px solid #5BCD00; /* Add a border at the top for emphasis */
-    position: relative; /* For positioning pseudo-elements */
+    padding-top: 12rem; /* Adjust this value to ensure space from the navbar */
+    padding-bottom: 15rem; /* Optional: Add space at the bottom if needed */
+    
 }
 
-.contact::before {
-    content: ''; /* Decorative background element */
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5); /* Semi-transparent overlay */
-    z-index: -1; /* Place behind content */
-    transition: background 0.3s ease-in-out; /* Smooth background transition */
+.icon-text {
+  font-size: 1.5rem;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 8rem; /* Add space for the icon */
 }
 
-.contact:hover::before {
-    background: rgba(255, 255, 255, 0.8); /* Darker overlay on hover */
+.icon-text .icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rem; /* Adjust icon size */
+  height: 6rem; /* Adjust icon size */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.contact .heading {
-    font-size: 3.2rem; /* Increase heading size */
-    color: #5BCD00; /* Accent color */
-    margin-bottom: 2.5rem; /* Increase space below heading */
-    position: relative; /* For positioning pseudo-elements */
-    transition: color 0.3s ease; /* Smooth color transition */
+.icon-professional {
+  background-image: url('../images/handshake.png'); /* Path to your professional icon */
 }
 
-.contact .heading::after {
-    content: ''; /* Add a decorative element */
-    display: block;
-    width: 100px;
-    height: 6px;
-    background-color: #f0c400; /* Accent color */
-    margin: 1rem auto 0; /* Center align and space from heading */
-    border-radius: 2px;
-    transition: width 0.3s ease; /* Smooth width transition */
+.icon-availability {
+  background-image: url('../images/communicate.png'); /* Path to your availability icon */
 }
 
-.contact .heading:hover::after {
-    width: 120px; /* Expand width on hover */
-}
-
-.contact .heading span {
-    color: #f0c400; /* Accent color for 'contact' */
-    font-weight: bold; /* Emphasize the word */
-}
 
 .contact .row {
-    display: flex; /* Flexbox layout for row items */
-    justify-content: center; /* Center the row content */
-    gap: 2rem; /* Space between items */
-    margin-top: 2rem; /* Space above the row */
+    display: flex;
+    background: var(--black);
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem; /* Add padding to ensure content isn't flush with the edges */
 }
 
-.contact .map {
-    width: 100%; /* Full width */
-    max-width: 700px; /* Increase maximum width */
-    height: 400px; /* Increase height */
-    border: 0; /* Remove border */
-    border-radius: 15px; /* More rounded corners */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Deeper shadow for more depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px; /* Rounded corners for the map */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for better separation */
 }
 
-.contact .map:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+    background: var(--bg); /* Background color for the form */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.contact form {
-    background: #fff; /* White background for the form */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Soft shadow for depth */
-    padding: 2.5rem; /* Increase padding inside the form */
-    max-width: 600px; /* Increase maximum width */
-    width: 100%; /* Full width */
-    margin-top: 2rem; /* Space above the form */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #000000;
+    margin-bottom: 2rem; /* Space below the header */
 }
 
-.contact form:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
-    background-color: #f9f9f9; /* Change background color on hover */
+.contact .row form .inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--bg); /* Ensure consistent background */
+    border: var(--border);
+    border-radius: 12px;
+    padding: 0 1rem; /* Padding inside the input box */
 }
 
-.contact form h3 {
-    font-size: 2.2rem; /* Increase font size for form heading */
-    color: #333; /* Darker text color */
-    margin-bottom: 1.5rem; /* Increase space below heading */
+.contact .row form .inputBox span {
+    color: #141313;
+    font-size: 1.5rem;
+    padding-left: 2rem;
 }
 
-.contact .inputBox {
-    display: flex; /* Flexbox for input boxes */
-    align-items: center; /* Center content vertically */
-    margin-bottom: 1.5rem; /* Increase space below each input box */
-    border: 1px solid #ddd; /* Border around input box */
-    border-radius: 5px; /* Rounded corners */
-    padding: 1rem; /* Increased padding inside input box */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+.contact .row form .inputBox input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #000000;
+    text-transform: none;
+    background: none;
+    border: none; /* Remove border to maintain styling */
+    border-radius: 12px; /* Rounded corners */
 }
 
-.contact .inputBox:hover {
-    border-color: #5BCD00; /* Change border color on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow on hover */
+.contact .row form textarea {
+    width: 100%;
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: #000000;
+    background: var(--bg);
+    border-radius: 12px;
+    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-.contact .inputBox span {
-    color: #5BCD00; /* Icon color */
-    margin-right: 1rem; /* Space between icon and input */
-}
-
-.contact .inputBox input {
-    border: none; /* Remove default border */
-    outline: none; /* Remove default outline */
-    width: 100%; /* Full width */
-    padding: 1rem; /* Increased padding inside input */
-    font-size: 1.4rem; /* Larger font size for input */
-    transition: font-size 0.3s ease; /* Smooth font size transition */
-}
-
-.contact .btn {
+.contact .row form .btn {
     background: #5BCD00; /* Accent color background */
     color: #fff; /* White text color */
     border: none; /* Remove border */
@@ -435,50 +450,34 @@ section{
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.contact .btn:hover {
+.contact .row form .btn:hover {
     background: #4a9a00; /* Darker shade on hover */
     transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-
-/* Media Query untuk tampilan mobile */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .contact {
-        padding: 4rem 1rem; /* Sesuaikan padding pada tampilan mobile */
-    }
-
-    .contact .heading {
-        font-size: 3rem; /* Ukuran font heading lebih besar pada mobile */
-    }
-
-    .contact form h3 {
-        font-size: 2rem; /* Ukuran font heading form lebih besar pada mobile */
-    }
-
-    .contact .inputBox input {
-        font-size: 1.5rem; /* Ukuran font input lebih besar pada mobile */
-    }
-
-    .contact .btn {
-        font-size: 1.5rem; /* Ukuran font tombol lebih besar pada mobile */
-    }
-
     .contact .row {
-        flex-direction: column; /* Atur arah fleksibel ke kolom */
-        align-items: center; /* Pusatkan item dalam baris */
+        flex-direction: column;
+        gap: 2rem; /* Increase gap for smaller screens */
     }
 
-    .contact .map, .contact form {
-        max-width: 100%; /* Pastikan lebar maksimum form dan peta adalah 100% */
-        margin-top: 1rem; /* Kurangi jarak atas */
+    .contact .row .map,
+    .contact .row form {
+        flex: 1 1 auto; /* Allow flex items to adjust to content */
+        width: 100%;
     }
 
-    .contact form {
-        margin-top: 1.5rem; /* Kurangi jarak atas form */
+    .contact .row form {
+        padding: 3rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    /* Add top margin to the contact section */
+    .contact {
+        margin-top: 5rem; /* Adjust this value based on your navbar height */
     }
 }
-
 
 /* Supported & Certified Section */
 .footer-info-col {

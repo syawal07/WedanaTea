@@ -286,7 +286,76 @@ section{
   margin-bottom: 20px;
   line-height: 1.6;
   text-align: justify;
+  position: relative; /* Required for positioning the icon */
+  padding-left: 10px; /* Space for the icon */
 }
+
+.product-section p::before {
+  content: ''; /* This will be overridden by specific icons */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  width: 50px; /* Size of the icon */
+  height: 50px; /* Size of the icon */
+  background-size: contain; /* Ensures the icon fits within its container */
+  background-repeat: no-repeat; /* Prevents icon from repeating */
+}
+
+
+.card {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  background-color: #FBFFF9;
+  border: 1px solid #77ff00;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center; /* Center the icon vertically within its container */
+  justify-content: center; /* Center the icon horizontally within its container */
+  margin-right: 10px; /* Increase space between icon and text */
+  transform: translateX(10px); /* Adjust icon position slightly to the right */
+  margin-bottom: 20px;
+}
+
+.icon-1-card .card-icon {
+  background-image: url('../images/ser1.png'); /* Path to the icon for the first card */
+}
+
+.icon-2-card .card-icon {
+  background-image: url('../images/ser2.png'); /* Path to the icon for the second card */
+}
+
+.icon-3-card .card-icon {
+  background-image: url('../images/ser3.png'); /* Path to the icon for the third card */
+}
+
+.card-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.card-content p {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
 
 /* Product Styling */
 .product {
@@ -315,10 +384,11 @@ section{
 
 .product-image img {
   width: 100%;
-  height: auto;
-  display: block; /* Remove bottom space under image */
-  border-top-left-radius: 12px; /* Rounded corners for the top-left of the image */
-  border-bottom-left-radius: 12px; /* Rounded corners for the bottom-left of the image */
+  height: 300px; /* Adjust this value as needed for the height */
+  object-fit: cover; /* Ensures the image covers the area while cropping excess */
+  border-radius: 8px; /* Optional: Rounded corners for images inside modal */
+  display: block; /* Ensure the image takes up the full width of its container */
+  margin-bottom: 20px; /* Space between the image and text */
   transition: transform 0.3s ease; /* Smooth transition for image scaling */
 }
 
@@ -350,36 +420,12 @@ section{
 }
 
 .product-info p {
-  font-size: 1.3em; /* Slightly larger font size */
+   font-size: 1.5rem;
   color: #000000;
   margin-bottom: 10px;
 }
 
-.product-details ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid dengan kolom responsif */
-  gap: 10px; /* Mengurangi jarak antar item */
-  padding-left: 0; /* Hapus padding default */
-  list-style-type: none; /* Hapus bullet points default */
-  margin: 0; /* Hapus margin default */
-}
 
-.product-details li {
-  font-size: 1.2em;
-  color: #000000;
-  position: relative; /* Posisi relatif untuk bullet custom */
-  padding-left: 20px; /* Jarak untuk bullet custom */
-  margin-bottom: 1px; /* Jarak di bawah setiap item daftar */
-}
-
-.product-details li::before {
-  content: "\2022"; /* Unicode untuk bullet point */
-  font-size: 1.2em; /* Ukuran bullet yang lebih kecil */
-  color: #000000; /* Warna bullet */
-  position: absolute;
-  left: 0; /* Posisi bullet di kiri */
-  top: 0;
-}
 
 
 /* Modal Styling */
@@ -403,16 +449,19 @@ section{
   width: 50%;
   max-width: 800px;
 }
-
 .modal-content img {
   width: 100%;
-  height: auto;
+  height: 300px; /* Adjust this value as needed for the height */
+  object-fit: cover; /* Ensures the image covers the area while cropping excess */
+  border-radius: 8px; /* Optional: Rounded corners for images inside modal */
+  display: block; /* Ensure the image takes up the full width of its container */
+  margin-bottom: 20px; /* Space between the image and text */
 }
 
 .close {
   color: #000000;
   float: right;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -423,6 +472,37 @@ section{
   cursor: pointer;
 }
 
+/* Styling the list inside the modal */
+.modal-content ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove default padding */
+  margin: 20px 0; /* Add some margin for spacing */
+  line-height: 1.8; /* Increase line height for readability */
+  transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.modal-content li {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 5px; /* Add spacing between list items */
+  position: relative;
+  padding-left: 25px; /* Add padding for custom bullet */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+.modal-content li::before {
+  content: "\2022"; /* Custom bullet point */
+  position: absolute;
+  left: 0;
+  color: #000000; /* Custom bullet color */
+  font-size: 1.2rem; /* Size of bullet */
+  top: 0;
+}
+
+.modal-content li:hover {
+  transform: translateX(10px); /* Slightly move the list item on hover */
+  color: #5BCD00; /* Change text color on hover */
+}
 /* Responsive Styling */
 @media (max-width: 768px) {
   .product-section {

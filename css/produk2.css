@@ -270,15 +270,57 @@ section{
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Mengurangi bayangan saat tombol aktif */
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+
+
+.card {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  background-color: #FBFFF9;
+  border: 1px solid #77ff00;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  max-width: 1200px; /* Increase max-width to make card wider */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
-.section {
-  padding: 10rem 0;
-  text-align: center;
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center; /* Center the icon vertically within its container */
+  justify-content: center; /* Center the icon horizontally within its container */
+  margin-right: 10px; /* Increase space between icon and text */
+  transform: translateX(10px); /* Adjust icon position slightly to the right */
+  margin-bottom: 20px;
+}
+
+.icon-1-card .card-icon {
+  background-image: url('../images/tea.png'); /* Path to the icon for the first card */
+}
+
+.icon-2-card .card-icon {
+  background-image: url('../images/branding.png'); /* Path to the icon for the second card */
+}
+
+.card-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.card-content p {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
 }
 
 /* Raw Material Products Styles */
@@ -383,7 +425,7 @@ section{
 }
 
 .raw-material-info p {
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #555;
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -405,7 +447,7 @@ section{
 }
 
 .advantage p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #000000;
   line-height: 1.6;
 }
@@ -417,6 +459,35 @@ section{
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .heading {
+    margin-top: 20px; /* Adjust the top margin for more space below the navbar */
+    font-size: 2.5rem; /* Decrease font size for smaller screens if needed */
+  }
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-icon {
+    margin-bottom: 10px;
+  }
+
+  .card-content p {
+    font-size: 1.8rem; /* Slightly larger font size on small screens */
+  }
+
+  #raw-material-products {
+    padding: 60px 10px; /* Adjust padding for smaller screens */
+  }
+
+  #raw-material-products-container h2 {
+    font-size: 2.5rem; /* Decrease header font size */
+  }
+
+  #raw-material-products-container p.subtitle {
+    font-size: 1.5rem; /* Decrease subtitle font size */
+  }
+
   .raw-material-card {
     flex-direction: column;
     text-align: center;
@@ -428,48 +499,24 @@ section{
   }
 
   .raw-material-info {
-    padding: 1rem;
+    padding: 2rem;
   }
-}
 
-#company-adv {
-  position: relative;
-  overflow: hidden;
-  background-image: url("../img/advantages-leaves-left.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  .raw-material-info h3 {
+    font-size: 2rem; /* Adjust font size for headers */
+  }
 
-#company-adv-container {
-  max-width: 1200px;
-  background-image: url("../img/adv-floating-leaves-right.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: right top;
-  padding: 50px 20px;
-}
+  .raw-material-info p {
+    font-size: 2rem; /* Slightly larger font size on small screens */
+  }
 
-/* Additional Styles for Elegance and Interaction */
-.raw-material-card:hover .raw-material-info h3 {
-  color: var(--primary); /* Change color on hover for headers */
-}
+  .advantage h4 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
 
-.raw-material-info a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.raw-material-info a:hover {
-  color: #397405;
-  text-decoration: underline;
-}
-
-.raw-material-info p::first-letter {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #397405; /* Stylize the first letter for a unique touch */
+  .advantage p {
+    font-size: 1.5rem; /* Slightly larger font size on small screens */
+  }
 }
 
 

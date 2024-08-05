@@ -38,7 +38,7 @@
       </a>
 
       <nav class="navbar">
-        <a href="#home">home</a>
+        <a href="#home">Home</a>
         <div class="dropdown">
           <a href="#" class="dropbtn">About</a>
           <div class="dropdown-content">
@@ -53,7 +53,7 @@
             <a href="./produk2.html"> Raw Material Products</a>
           </div>
         </div>
-        <a href="#contact">contact</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="icons">
@@ -125,31 +125,37 @@
           <h1 class="heading">
             <span>World Best Quality of </span> Tea Product
           </h1>
-          <div class="row">
-            <div class="image">
-              <img
-                src="images/about-img.jpg"
-                alt="About Image"
-                class="clickable-image"
-              />
-            </div>
-            <div class="content">
+          <div class="card icon-1-card">
+            <div class="card-icon"></div>
+            <div class="card-content">
               <p>
-                1. Wedana Tea International is a leading supplier of premium tea
+                Wedana Tea International is a leading supplier of premium tea
                 leaf products from Indonesia. We are an Indonesian company
                 dedicated to supplying high quality teas that have value or
                 benefit to our customers.
               </p>
+            </div>
+          </div>
+
+          <div class="card icon-2-card">
+            <div class="card-icon"></div>
+            <div class="card-content">
               <p>
-                2. Our tea leaves are sourced from one of the largest tea
-                producing plantations in Indonesia, the second largest tea
-                producing region in the country, ensuring a sustainable supply
-                of high quality tea. We work closely with our local growers,
-                customers, and authorities to ensure mutually beneficial growth
-                and success for us.
+                Our tea leaves are sourced from one of the largest tea producing
+                plantations in Indonesia, the second largest tea producing
+                region in the country, ensuring a sustainable supply of high
+                quality tea. We work closely with our local growers, customers,
+                and authorities to ensure mutually beneficial growth and success
+                for us.
               </p>
+            </div>
+          </div>
+
+          <div class="card icon-3-card">
+            <div class="card-icon"></div>
+            <div class="card-content">
               <p>
-                3. Wedana Tea International is ready to support your business
+                Wedana Tea International is ready to support your business
                 success through consistent and quality supply. If you're looking
                 for a reliable supplier to increase your sales and support your
                 supply chain, we are the right choice to improve the quality and
@@ -157,200 +163,267 @@
               </p>
             </div>
           </div>
+
           <!-- Photo Gallery Section -->
           <div class="photo-gallery">
             <div class="photo-card" onclick="animatePhoto(this)">
-              <img src="images/about3.jpg" alt="Tea Image 1" />
+              <img src="./images/about3.jpg" alt="Tea Image 1" />
             </div>
             <div class="photo-card" onclick="animatePhoto(this)">
-              <img src="images/about2.jpg" alt="Tea Image 2" />
+              <img src="./images/about2.jpg" alt="Tea Image 2" />
             </div>
             <div class="photo-card" onclick="animatePhoto(this)">
-              <img src="images/about1.jpg" alt="Tea Image 3" />
+              <img src="./images/about1.jpg" alt="Tea Image 3" />
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- end about -->
 
-    <!-- Products Section -->
-    <section class="products" id="products">
+    <div class="product-section">
       <div id="company-adv">
         <div id="company-adv-container">
-          <h1 class="heading">Our <span>Products</span></h1>
-          <div class="box-container">
-            <div class="box">
-              <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
+          <h1 class="heading"><span>Our </span> Tea Product</h1>
+          <div class="product">
+            <div class="product-image">
+              <img
+                src="https://img.freepik.com/free-photo/hot-drink-cup-tea-tea-drink-nutritional_1172-354.jpg?uid=R53935415&ga=GA1.1.1575223614.1671126546&semt=ais_hybrid"
+                alt="Green Tea"
+              />
+              <div class="product-actions">
+                <a href="#" class="action-icon fas fa-shopping-cart"></a>
+                <a href="#" class="action-icon fas fa-heart"></a>
                 <a
                   href="#"
-                  class="fas fa-eye"
+                  class="action-icon fas fa-eye"
                   onclick="openModal('green-tea')"
                 ></a>
               </div>
-              <div class="image">
-                <img
-                  src="https://tongtji.co.id/tongtji/tea_greentea.png"
-                  alt="Green Tea"
-                />
-              </div>
-              <div class="content">
-                <h3>Green Tea</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$10.99 <span>$11.99</span></div>
+            </div>
+            <div class="product-info">
+              <h2><span>Green</span> Tea</h2>
+              <p>
+                Green tea, with the Latin name Camellia sinensis, is a popular
+                beverage in Indonesia, Japan, and China. Green tea is a type of
+                tea that has undergone minimal oxidation during processing. The
+                shorter processing time results in a milder flavor profile and
+                helps maintain the integrity of beneficial chemical compounds.
+              </p>
+              <div class="product-details">
+                <p><strong>Quality:</strong> Premium</p>
+                <p><strong>Competitive Pricing:</strong>/ 100g</p>
+                <p>
+                  <strong>Description:</strong> Enjoy the fresh and rejuvenating
+                  taste of our premium green tea. Perfect for daily consumption.
+                </p>
               </div>
             </div>
+          </div>
 
-            <div class="box">
-              <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
+          <div class="product">
+            <div class="product-image">
+              <img
+                src="https://img.freepik.com/premium-photo/cup-tea-pile-black-tea_1022426-11675.jpg?uid=R53935415&ga=GA1.1.1575223614.1671126546&semt=ais_hybrid"
+                alt="Black Tea"
+              />
+              <div class="product-actions">
+                <a href="#" class="action-icon fas fa-shopping-cart"></a>
+                <a href="#" class="action-icon fas fa-heart"></a>
                 <a
                   href="#"
-                  class="fas fa-eye"
+                  class="action-icon fas fa-eye"
                   onclick="openModal('black-tea')"
                 ></a>
               </div>
-              <div class="image">
-                <img
-                  src="https://tongtji.co.id/tongtji/tea_blacktea.png"
-                  alt="Black Tea"
-                />
-              </div>
-              <div class="content">
-                <h3>Black Tea</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$10.99 <span>$11.99</span></div>
+            </div>
+            <div class="product-info">
+              <h2><span>Black</span>Tea</h2>
+              <p>
+                The production of black tea involves a process called oxidation,
+                which transforms the green leaves of Camellia sinensis into a
+                brownish-black hue. The term "black tea" is derived from its
+                dark color. Black tea undergoes complete fermentation after
+                picking, giving it a distinctive flavor and a darker color than
+                green tea.
+              </p>
+              <div class="product-details">
+                <p><strong>Quality:</strong> Classic</p>
+                <p><strong>Competitive Pricing:</strong>100g</p>
+                <p>
+                  <strong>Description:</strong> Rich and bold, our black tea
+                  provides a robust flavor for those who enjoy a stronger cup of
+                  tea.
+                </p>
               </div>
             </div>
+          </div>
 
-            <div class="box">
-              <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
+          <div class="product">
+            <div class="product-image">
+              <img
+                src="https://img.freepik.com/premium-photo/herbal-tea-with-jasmine-flowers_75924-1583.jpg?uid=R53935415&ga=GA1.1.1575223614.1671126546&semt=ais_hybrid"
+                alt="Jasmine Tea"
+              />
+              <div class="product-actions">
+                <a href="#" class="action-icon fas fa-shopping-cart"></a>
+                <a href="#" class="action-icon fas fa-heart"></a>
                 <a
                   href="#"
-                  class="fas fa-eye"
+                  class="action-icon fas fa-eye"
                   onclick="openModal('jasmine-tea')"
                 ></a>
               </div>
-              <div class="image">
-                <img
-                  src="https://tongtji.co.id/tongtji/tea_jasmine.png"
-                  alt="Jasmine Tea"
-                />
-              </div>
-              <div class="content">
-                <h3>Jasmine Tea</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$10.99 <span>$11.99</span></div>
+            </div>
+            <div class="product-info">
+              <h2><span>Jasmine</span>Tea</h2>
+              <p>
+                Jasmine tea is a beverage produced by infusing green or black
+                tea with jasmine flowers, resulting in an enhanced aromatic
+                profile. Jasmine tea is a rich source of vitamins and
+                antioxidants. This tea boasts a fragrant and refreshing aroma
+                and flavor. Furthermore, jasmine tea is thought to confer a
+                number of health benefits.
+              </p>
+              <div class="product-details">
+                <p><strong>Quality:</strong> Fragrant</p>
+                <p><strong>Competitive Pricing:</strong>100g</p>
+                <p>
+                  <strong>Description:</strong> Delight in the delicate floral
+                  notes of our jasmine tea, perfect for a soothing and aromatic
+                  experience.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Product Details Modals -->
-    <div id="green-tea" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('green-tea')">&times;</span>
-        <h2>Green Tea</h2>
-        <p>
-          Green tea, with the Latin name Camellia sinensis, is a popular
-          beverage in Indonesia, Japan, and China. Green tea is a type of tea
-          that has undergone minimal oxidation during processing. The shorter
-          processing time results in a milder flavor profile and helps maintain
-          the integrity of beneficial chemical compounds.
-        </p>
-        <p>
-          Green tea is one of the most well-known types of tea. Green tea leaves
-          do not undergo significant fermentation after picking, thus retaining
-          their green color and antioxidant content.
-        </p>
-        <h3>Green Tea and Its Nutritional Content</h3>
-        <p>
-          In 100 grams of green tea, there are almost no calories, but the
-          following nutrients are present:
-        </p>
-        <ul>
-          <li>300 kcal of energy</li>
-          <li>0.2 grams of protein</li>
-          <li>1 milligram of magnesium</li>
-          <li>6 milligrams of potassium</li>
-          <li>12 milligrams of caffeine</li>
-        </ul>
-        <p>
-          In addition, green tea also contains vitamin B, vitamin C, and various
-          active compounds that are antioxidant, anti-inflammatory, and
-          anticancer. All of these nutrients in green tea are beneficial in
-          maintaining a healthy body.
-        </p>
+      <!-- Modal for Green Tea -->
+      <div
+        id="green-tea"
+        class="modal"
+        role="dialog"
+        aria-labelledby="green-tea-label"
+        aria-hidden="true"
+      >
+        <div class="modal-content">
+          <span
+            class="close"
+            onclick="closeModal('green-tea')"
+            aria-label="Close modal"
+            >&times;</span
+          >
+          <h2 id="green-tea-label"><span>Green</span> Tea</h2>
+          <img
+            src="https://img.freepik.com/free-photo/hot-drink-cup-tea-tea-drink-nutritional_1172-354.jpg?uid=R53935415&ga=GA1.1.1575223614.1671126546&semt=ais_hybrid"
+            alt="Green Tea"
+          />
+          <p>
+            Green tea, with the Latin name <em>Camellia sinensis</em>, is a
+            popular beverage in Indonesia, Japan, and China. Green tea is a type
+            of tea that has undergone minimal oxidation during processing. The
+            shorter processing time results in a milder flavor profile and helps
+            maintain the integrity of beneficial chemical compounds.
+          </p>
+          <p>
+            Green tea is one of the most well-known types of tea. Green tea
+            leaves do not undergo significant fermentation after picking, thus
+            retaining their green color and antioxidant content.
+          </p>
+          <h3>Green Tea and Its Nutritional Content</h3>
+          <p>
+            In 100 grams of green tea, there are almost no calories, but the
+            following nutrients are present:
+          </p>
+          <ul>
+            <li>300 kcal of energy</li>
+            <li>0.2 grams of protein</li>
+            <li>1 milligram of magnesium</li>
+            <li>6 milligrams of potassium</li>
+            <li>12 milligrams of caffeine</li>
+          </ul>
+          <p>
+            In addition, green tea also contains vitamin B, vitamin C, and
+            various active compounds that are antioxidant, anti-inflammatory,
+            and anticancer. All of these nutrients in green tea are beneficial
+            in maintaining a healthy body.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div id="black-tea" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('black-tea')">&times;</span>
-        <h2>Black Tea</h2>
-        <p>
-          The production of black tea involves a process called oxidation, which
-          transforms the green leaves of Camellia sinensis into a brownish-black
-          hue. The term "black tea" is derived from its dark color. Black tea
-          undergoes complete fermentation after picking, giving it a distinctive
-          flavor and a darker color than green tea.
-        </p>
-        <h3>Black Tea Nutritional Content</h3>
-        <p>
-          Here is the nutritional composition of black tea calculated per 100
-          grams:
-        </p>
-        <ul>
-          <li>Calories: 293</li>
-          <li>Water: 8 g</li>
-          <li>Protein: 24.5 grams</li>
-          <li>Carbohydrates: 58.8 grams</li>
-          <li>Fiber: 8.7 grams</li>
-          <li>Calcium: 327 grams</li>
-          <li>Phosphorus: 313 mg</li>
-          <li>Potassium: 5854.8 mg</li>
-          <li>Beta carotene: 2700 mcg</li>
-          <li>Niacin (Vitamin B): 7.6 mg</li>
-          <li>Vitamin C: 9 mg</li>
-        </ul>
+      <!-- Modal for Black Tea -->
+      <div
+        id="black-tea"
+        class="modal"
+        role="dialog"
+        aria-labelledby="black-tea-label"
+        aria-hidden="true"
+      >
+        <div class="modal-content">
+          <span
+            class="close"
+            onclick="closeModal('black-tea')"
+            aria-label="Close modal"
+            >&times;</span
+          >
+          <h2 id="black-tea-label"><span>Black</span> Tea</h2>
+          <img
+            src="https://img.freepik.com/premium-photo/cup-tea-pile-black-tea_1022426-11675.jpg?uid=R53935415&ga=GA1.1.1575223614.1671126546&semt=ais_hybrid"
+            alt="Black Tea"
+          />
+          <p>
+            The production of black tea involves a process called oxidation,
+            which transforms the green leaves of <em>Camellia sinensis</em> into
+            a brownish-black hue. The term "black tea" is derived from its dark
+            color. Black tea undergoes complete fermentation after picking,
+            giving it a distinctive flavor and a darker color than green tea.
+          </p>
+          <h3>Nutritional Composition of Black Tea (per 100 grams)</h3>
+          <ul>
+            <li>Calories: 293 kcal</li>
+            <li>Water: 8 g</li>
+            <li>Protein: 24.5 grams</li>
+            <li>Carbohydrates: 58.8 grams</li>
+            <li>Fiber: 8.7 grams</li>
+            <li>Calcium: 327 grams</li>
+            <li>Phosphorus: 313 mg</li>
+            <li>Potassium: 5854.8 mg</li>
+            <li>Beta carotene: 2700 mcg</li>
+            <li>Niacin (Vitamin B): 7.6 mg</li>
+            <li>Vitamin C: 9 mg</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div id="jasmine-tea" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('jasmine-tea')">&times;</span>
-        <h2>Jasmine Tea</h2>
-        <p>
-          Jasmine tea is a beverage produced by infusing green or black tea with
-          jasmine flowers, resulting in an enhanced aromatic profile. Jasmine
-          tea is a rich source of vitamins and antioxidants. This tea boasts a
-          fragrant and refreshing aroma and flavor. Furthermore, jasmine tea is
-          thought to confer a number of health benefits.
-        </p>
+      <!-- Modal for Jasmine Tea -->
+      <div
+        id="jasmine-tea"
+        class="modal"
+        role="dialog"
+        aria-labelledby="jasmine-tea-label"
+        aria-hidden="true"
+      >
+        <div class="modal-content">
+          <span
+            class="close"
+            onclick="closeModal('jasmine-tea')"
+            aria-label="Close modal"
+            >&times;</span
+          >
+          <h2 id="jasmine-tea-label"><span>Jasmine</span> Tea</h2>
+          <img
+            src="https://img.freepik.com/premium-photo/herbal-tea-with-jasmine-flowers_75924-1583.jpg?uid=R53935415&ga=GA1.1.1575223614.1671126546&semt=ais_hybrid"
+            alt="Jasmine Tea"
+          />
+          <p>
+            Jasmine tea is a beverage produced by infusing green or black tea
+            with jasmine flowers, resulting in an enhanced aromatic profile.
+            Jasmine tea is a rich source of vitamins and antioxidants. This tea
+            boasts a fragrant and refreshing aroma and flavor. Furthermore,
+            jasmine tea is thought to confer a number of health benefits.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -448,31 +521,61 @@
     <!-- contact section starts  -->
 
     <section class="contact" id="contact">
-      <h1 class="heading"><span>contact</span> us</h1>
-      <div class="row">
-        <iframe
-          class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0171037726013!2d109.12351827415497!3d-6.888554293110479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9c787089b59%3A0x4ce52f99eee48ea5!2sJl.%20Teuku%20Umar%20No.118%2C%20Debong%20Tengah%2C%20Kec.%20Tegal%20Sel.%2C%20Kota%20Tegal%2C%20Jawa%20Tengah%2052132!5e0!3m2!1sid!2sid!4v1722325964196!5m2!1sid!2sid"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-        <form action="">
-          <h3>get in touch</h3>
-          <div class="inputBox">
-            <span class="fas fa-user"></span>
-            <input type="text" placeholder="name" />
-          </div>
-          <div class="inputBox">
-            <span class="fas fa-envelope"></span>
-            <input type="email" placeholder="email" />
-          </div>
-          <div class="inputBox">
-            <span class="fas fa-phone"></span>
-            <input type="text" placeholder="number" />
-          </div>
+      <div id="company-adv">
+        <div id="company-adv-container">
+          <h1 class="heading"><span>Contact</span> Us</h1>
+          <p class="icon-text">
+            <span class="icon icon-professional"></span>
+            Choosing us as a business partner, you will partner with a team of
+            people who are very professional and service-oriented people.
+          </p>
 
-          <input type="submit" value="contact now" class="btn" />
-        </form>
+          <p class="icon-text">
+            <span class="icon icon-availability"></span>
+            We are available for any demand and inquiry, any time you needed.
+            Our experienced team are ready to discuss with you to find the
+            product, price & specification you want to fulfill every customer's
+            request.
+          </p>
+
+          <div class="row">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0171037726013!2d109.12351827415497!3d-6.888554293110479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9c787089b59%3A0x4ce52f99eee48ea5!2sJl.%20Teuku%20Umar%20No.118%2C%20Debong%20Tengah%2C%20Kec.%20Tegal%20Sel.%2C%20Kota%20Tegal%2C%20Jawa%20Tengah%2052132!5e0!3m2!1sid!2sid!4v1722325964196!5m2!1sid!2sid"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="0a831b59-207f-40bb-bb32-f004bc22e7be"
+              />
+
+              <h1 class="heading"><span>Get In </span> Touch</h1>
+
+              <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <span>Name</span>
+                <input type="text" name="Name" required />
+              </div>
+
+              <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <span>Email</span>
+                <input type="email" name="Email" required />
+              </div>
+
+              <div class="inputBox">
+                <span class="fas fa-comments"></span>
+                <span>Message</span>
+                <textarea name="Message" required></textarea>
+              </div>
+
+              <button class="btn" type="submit">Submit Form</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -490,10 +593,10 @@
       </div>
 
       <div class="links">
-        <a href="#">home</a>
-        <a href="#">about</a>
-        <a href="#">products</a>
-        <a href="#">contact</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
       </div>
       <div class="info">
         <p>
