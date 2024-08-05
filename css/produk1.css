@@ -317,8 +317,8 @@ section{
 }
 
 .card-icon {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -461,7 +461,7 @@ section{
 .close {
   color: #000000;
   float: right;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -502,6 +502,30 @@ section{
 .modal-content li:hover {
   transform: translateX(10px); /* Slightly move the list item on hover */
   color: #5BCD00; /* Change text color on hover */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%; /* Increase width on smaller screens for better usability */
+    margin: 10% auto; /* Adjust margin for better centering */
+  }
+
+  .modal-content img {
+    max-height: 250px; /* Reduce max height on smaller screens */
+  }
+
+  .modal-content li {
+    font-size: 1rem; /* Adjust font size for better readability on small screens */
+    padding-left: 20px; /* Adjust padding for smaller screen */
+  }
+
+  .modal-content li::before {
+    font-size: 1rem; /* Adjust bullet size for smaller screens */
+  }
+
+  .close {
+    font-size: 3rem; /* Slightly smaller close button on small screens */
+  }
 }
 /* Responsive Styling */
 @media (max-width: 768px) {

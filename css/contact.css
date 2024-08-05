@@ -341,7 +341,7 @@ section{
   line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: justify;
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -353,8 +353,8 @@ section{
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 6rem; /* Adjust icon size */
-  height: 6rem; /* Adjust icon size */
+  width: 8rem; /* Adjust icon size */
+  height: 8rem; /* Adjust icon size */
   background-size: cover;
   background-repeat: no-repeat;
 }

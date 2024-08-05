@@ -272,58 +272,7 @@ section{
 
 
 
-.card {
-  display: flex;
-  align-items: center; /* Center items vertically */
-  background-color: #FBFFF9;
-  border: 1px solid #77ff00;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  overflow: hidden;
-  max-width: 1200px; /* Increase max-width to make card wider */
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box; /* Ensure padding is included in width calculation */
-}
-
-.card-icon {
-  width: 60px;
-  height: 60px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center; /* Center the icon vertically within its container */
-  justify-content: center; /* Center the icon horizontally within its container */
-  margin-right: 10px; /* Increase space between icon and text */
-  transform: translateX(10px); /* Adjust icon position slightly to the right */
-  margin-bottom: 20px;
-}
-
-.icon-1-card .card-icon {
-  background-image: url('../images/tea.png'); /* Path to the icon for the first card */
-}
-
-.icon-2-card .card-icon {
-  background-image: url('../images/branding.png'); /* Path to the icon for the second card */
-}
-
-.card-content {
-  padding: 15px;
-  flex: 1;
-}
-
-.card-content p {
-  font-size: 1.5rem;
-  color: #000000;
-  margin-bottom: 20px;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-/* Raw Material Products Styles */
+/* Raw Material Products Section */
 #raw-material-products {
   padding: 100px 20px; /* Adjusted padding for better spacing */
   background-image: url("../images/advantages-leaves-left.png");
@@ -364,14 +313,59 @@ section{
   margin-right: auto; /* Center the subtitle with automatic margins */
 }
 
-/* Raw Material Content Styling */
-.raw-material-content {
+/* Raw Material Card Styles */
+.card {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  align-items: center; /* Center items vertically */
+  background-color: #FBFFF9;
+  border: 1px solid #77ff00;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  max-width: 1200px; /* Increase max-width to make card wider */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
-/* Raw Material Card Styles */
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center; /* Center the icon vertically within its container */
+  justify-content: center; /* Center the icon horizontally within its container */
+  margin-right: 10px; /* Increase space between icon and text */
+  transform: translateX(10px); /* Adjust icon position slightly to the right */
+  margin-bottom: 20px;
+}
+
+.icon-1-card .card-icon {
+  background-image: url('../images/tea.png'); /* Path to the icon for the first card */
+}
+
+.icon-2-card .card-icon {
+  background-image: url('../images/branding.png'); /* Path to the icon for the second card */
+}
+
+.card-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.card-content p {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Raw Material Card Content Styling */
 .raw-material-card {
   display: flex;
   flex-direction: row;
@@ -463,6 +457,7 @@ section{
     margin-top: 20px; /* Adjust the top margin for more space below the navbar */
     font-size: 2.5rem; /* Decrease font size for smaller screens if needed */
   }
+  
   .card {
     flex-direction: column;
     text-align: center;
@@ -518,8 +513,6 @@ section{
     font-size: 1.5rem; /* Slightly larger font size on small screens */
   }
 }
-
-
 
 /* Supported & Certified Section */
 .footer-info-col {
