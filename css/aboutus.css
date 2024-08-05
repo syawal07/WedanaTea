@@ -440,9 +440,6 @@ section{
 /* Styling for the "Why Us?" section */
 .why-us {
   background: #ffffff;
-  background-image: url('../images/ptw.png'); /* Add your background image */
-  background-size: cover; /* Ensure the image covers the entire section */
-  background-position: center; /* Center the background image */
   padding: 4rem 2rem; /* Increased padding for a more spacious feel */
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -454,15 +451,15 @@ section{
 .why-us::before {
   content: '';
   position: absolute;
-  top: 0; /* Adjust to cover entire section */
-  left: 0; /* Adjust to cover entire section */
-  width: 100%; /* Adjust to cover entire section */
-  height: 100%; /* Adjust to cover entire section */
-  background: rgba(0, 0, 0, 0.2); /* Reduced transparency for a darker overlay */
+  top: 50%;
+  left: -20%;
+  width: 140%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.05);
+  transform: rotate(-20deg);
   z-index: 0;
   pointer-events: none;
 }
-
 
 .why-us .title {
   font-size: 3rem; /* Increased font size */
@@ -514,7 +511,6 @@ section{
 .reason-image {
   width: 80px; /* Increased size of the image */
   height: 80px;
-  border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -598,17 +594,31 @@ section{
 
 
 #company-adv {
-    position: relative;
-    overflow: hidden;
-    background-image: url("../img/advantages-leaves-left.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../images/ptw1.png"); /* Update with your image path */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the entire section */
 }
+
+#company-adv::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Cover the top of the section */
+  left: 0; /* Cover the left of the section */
+  width: 100%; /* Cover the entire width of the section */
+  height: 100%; /* Cover the entire height of the section */
+  background: rgba(0, 0, 0, 0.2); /* Adjust transparency to your liking */
+  z-index: 0; /* Ensure it's behind the content */
+  pointer-events: none; /* Avoid interfering with interactions */
+}
+
 
 #company-adv-container {
     max-width: 1200px;
-    background-image: url("../img/adv-floating-leaves-right.png");
+    background-image: url("../images/adv-floating-leaves-right.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
